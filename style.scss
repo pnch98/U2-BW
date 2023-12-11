@@ -1,1 +1,16 @@
 @import "./bootstrap-override";
+
+.w-custom-1 {
+  width: 400px;
+}
+
+.w-custom-2 {
+  width: 200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+.bg-black {
+  background-color: black;
+}
