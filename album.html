@@ -88,10 +88,10 @@
         <main class="flex-grow-1 spotify-bg text-white overflow-y-scroll p-4">
           <div id="btn_acc" class="d-flex justify-content-between mt-3 mb-3">
             <div id="btns" class="d-flex">
-              <button class="btn btn-black opacity-75 rounded-circle text-white me-1 px-2 py-0">
+              <button class="btn btn-dark opacity-75 rounded-circle me-1 px-2 py-0">
                 <i class="bi bi-chevron-compact-left"></i>
               </button>
-              <button class="btn btn-black opacity-75 rounded-circle text-white px-2 py-0">
+              <button class="btn btn-dark opacity-75 rounded-circle px-2 py-0">
                 <i class="bi bi-chevron-compact-right"></i>
               </button>
             </div>
@@ -115,143 +115,49 @@
           </div>
           <!------>
           <button id="showBtn" class="btn btn-dark border border-1 position-fixed top-1 end-0 d-none">&lt;</button>
-          <div id="ads" class="p-3 d-flex bg-banner rounded-1 mb-3">
-            <div style="height: 200px; width: auto" class="me-3">
-              <img src="./assets/imgs/main/image-1.jpg" class="h-100" />
+          <div id="currentAlbum" class="p-3 d-flex rounded-1 mb-3">
+            <div style="width: 180px" class="me-3">
+              <img src="./assets/imgs/main/image-1.jpg" class="w-100" />
             </div>
-            <div id="album" class="d-flex flex-column justify-content-between flex-grow-1">
-              <div>
-                <div id="albumHide" class="d-flex justify-content-between align-items-center">
-                  <p class="text-uppercase fs-8 mb-0">Album</p>
-                  <button class="btn btn-dark rounded-pill py-0 text-uppercase text-white-50 fs-9">
-                    nascondi annunci
-                  </button>
-                </div>
-
-                <h1 class="display-2 fw-bold mb-0">VIOLA (feat. Dio)</h1>
-                <p class="fs-8">Autori</p>
+            <!------>
+            <div id="albumInfo" class="flex-grow-1">
+              <div id="albumHide" class="d-flex justify-content-between align-items-baseline">
+                <p class="text-uppercase fs-10 mt-5">Album</p>
               </div>
-              <div>
-                <p class="fs-8 mb-1">Ascolta</p>
-
-                <div id="albumBtn" class="d-flex">
-                  <button class="btn spotify-green-bg rounded-pill px-3 me-2 fs-7">Play</button>
-                  <button class="btn btn-save border border-1 rounded-pill px-3 fs-7">Salva</button>
-                  <button class="btn text-white fs-6 d-flex align-items-center">
-                    <i class="bi bi-three-dots"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!----->
-          <div id="buonasera" class="mb-4">
-            <h3>Buonasera</h3>
-            <div class="row row-cols-3 gy-2 gx-3">
-              <div class="col">
-                <div class="d-flex rounded bg-dark align-items-center">
-                  <div style="width: 75px" class="me-2">
-                    <img src="assets/imgs/main/image-1.jpg" alt="img10" class="w-100 rounded-start" />
-                  </div>
-                  <div>
-                    <p class="fs-6 m-0">early stage emily syndrome (sett-ott 2022)</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="d-flex rounded bg-dark align-items-center">
-                  <div style="width: 75px" class="me-2">
-                    <img src="assets/imgs/main/image-1.jpg" alt="img10" class="w-100 rounded-start" />
-                  </div>
-                  <div>
-                    <p class="fs-6 m-0">early stage emily syndrome (sett-ott 2022)</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="d-flex rounded bg-dark align-items-center">
-                  <div style="width: 75px" class="me-2">
-                    <img src="assets/imgs/main/image-1.jpg" alt="img10" class="w-100 rounded-start" />
-                  </div>
-                  <div>
-                    <p class="fs-6 m-0">early stage emily syndrome (sett-ott 2022)</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="d-flex rounded bg-dark align-items-center">
-                  <div style="width: 75px" class="me-2">
-                    <img src="assets/imgs/main/image-1.jpg" alt="img10" class="w-100 rounded-start" />
-                  </div>
-                  <div>
-                    <p class="fs-6 m-0">early stage emily syndrome (sett-ott 2022)</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="d-flex rounded bg-dark align-items-center">
-                  <div style="width: 75px" class="me-2">
-                    <img src="assets/imgs/main/image-1.jpg" alt="img10" class="w-100 rounded-start" />
-                  </div>
-                  <div>
-                    <p class="fs-6 m-0">early stage emily syndrome (sett-ott 2022)</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="d-flex rounded bg-dark align-items-center">
-                  <div style="width: 75px" class="me-2">
-                    <img src="assets/imgs/main/image-1.jpg" alt="img10" class="w-100 rounded-start" />
-                  </div>
-                  <div>
-                    <p class="fs-6 m-0">early stage emily syndrome (sett-ott 2022)</p>
+              <div id="info">
+                <h1>VIOLA</h1>
+                <div class="d-flex mt-4 align-content-center">
+                  <div style="width: 20px" class="d-flex">
+                    <img src="./assets/imgs/main/image-16.jpg" alt="artisticon" class="w-100 rounded-circle" />
+                    <p class="mx-1 fs-8 mb-0">blabla</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <!----->
-          <div id="other">
-            <div class="d-flex justify-content-between align-items-center">
-              <h5>Altro di ciò che ti piace</h5>
-              <button class="btn btn-secondary rounded-pill py-0 text-uppercase fs-10">visualizza tutto</button>
+          <div id="playAlbum" class="mb-3">
+            <div id="albumBtn" class="d-flex align-items-center">
+              <button id="btnPlay" class="btn text-spotify-green border border-0 me-3 fs-1 p-0">
+                <i class="bi bi-play-circle-fill"></i>
+              </button>
+              <div class="text-white fs-3 me-3"><i class="bi bi-heart me-1"></i></div>
+              <div class="text-white d-flex align-items-center fs-4">
+                <i class="bi bi-three-dots"></i>
+              </div>
             </div>
-            <div class="row row-cols-5 gx-3">
-              <div class="col">
-                <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-16.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
-                  <h6 class="fs-10">Hot Hits Italia</h6>
-                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-16.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
-                  <h6 class="fs-10">Hot Hits Italia</h6>
-                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-16.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
-                  <h6 class="fs-10">Hot Hits Italia</h6>
-                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-16.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
-                  <h6 class="fs-10">Hot Hits Italia</h6>
-                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-16.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
-                  <h6 class="fs-10">Hot Hits Italia</h6>
-                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
-                </div>
-              </div>
+            <div id="albumTable">
+              <table class="w-100">
+                <thead class="border border-1 border-top-0 border-end-0 border-start-0">
+                  <tr class="">
+                    <th>#</th>
+                    <th>Titolo</th>
+                    <th>Riproduzioni</th>
+                    <th>O</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
             </div>
           </div>
         </main>

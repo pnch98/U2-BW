@@ -21,3 +21,61 @@ main {
   height: calc(100vh - 92px);
   overflow-y: auto;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6e6e6e;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.spotify-green-bg {
+  font-weight: bold;
+  color: black;
+  background-color: #1ed760;
+}
+
+.spotify-green-bg:hover {
+  background-color: #22ad53;
+}
+.btn-save {
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+}
+.btn-save:hover {
+  color: black;
+  background-color: rgb(144, 144, 144);
+}
+.bg-banner {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(10deg, rgba(0, 0, 0, 1) 0%, rgba(32, 32, 32, 1) 100%);
+}
+.btn-black {
+  background-color: black;
+  opacity: 75%;
+}
+.btn-black:hover {
+  background-color: rgb(23, 23, 23);
+  opacity: 75%;
+}
+.col > div {
+  cursor: pointer;
+}
+
+.text-spotify-green {
+  color: #1ed760;
+}
