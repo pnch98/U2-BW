@@ -12000,18 +12000,15 @@ textarea.form-control-lg {
   width: 200px;
 }
 
-* {
+/* * {
   box-sizing: border-box;
-}
-
+} */
 .bg-black {
   background-color: black;
 }
 
 .spotify-bg {
   background-image: linear-gradient(#212121, #121212);
-<<<<<<< Updated upstream
-=======
 }
 
 main {
@@ -12078,5 +12075,4 @@ main {
 
 .col > div {
   cursor: pointer;
->>>>>>> Stashed changes
 }/*# sourceMappingURL=style.css.map */
