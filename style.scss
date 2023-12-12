@@ -17,3 +17,7 @@
 .spotify-bg {
   background-image: linear-gradient(#212121, #121212);
 }
+main {
+  height: calc(100vh - 92px);
+  overflow-y: auto;
+}
