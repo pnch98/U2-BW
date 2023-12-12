@@ -12,7 +12,7 @@
     <div class="container-fluid p-0">
       <div class="d-flex">
         <!--Navbar-->
-        <div class="bg-black" style="width: 30%">
+        <div class="bg-black flex-shrink-0" style="width: 18%">
           <nav class="navbar navbar-expand-lg">
             <div
               class="container-fluid flex-column align-items-start border border-1 border-dark border-top-0 border-end-0 border-start-0 px-2 pb-3"
@@ -52,9 +52,7 @@
                     >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white-50 fw-semibold" href="#"
-                      ><i class="bi bi-search me-1"></i> Cerca</a
-                    >
+                    <a class="nav-link text-white-50 fw-semibold" href="#"><i class="bi bi-search me-1"></i> Cerca</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-white-50 fw-semibold" href="#"
@@ -85,59 +83,61 @@
           </nav>
         </div>
         <!--Main-->
-        <main class="flex-grow-1 spotify-bg text-white overflow-y-scroll p-4">
-          <div id="btn_acc" class="d-flex justify-content-between mt-3 mb-3">
-            <div id="btns" class="d-flex">
-              <button class="btn btn-dark opacity-75 rounded-circle me-1 px-2 py-0">
-                <i class="bi bi-chevron-compact-left"></i>
-              </button>
-              <button class="btn btn-dark opacity-75 rounded-circle px-2 py-0">
-                <i class="bi bi-chevron-compact-right"></i>
-              </button>
-            </div>
-            <div id="acc">
-              <div class="dropdown">
-                <button
-                  class="btn btn-dark dropdown-toggle rounded-pill"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <i class="bi bi-person-circle"></i> Pippo 8
+        <main class="flex-grow-1 spotify-bg text-white overflow-y-scroll overflow-x-hidden">
+          <div class="bg-success p-4">
+            <div id="btn_acc" class="d-flex justify-content-between mt-3 mb-3">
+              <div id="btns" class="d-flex">
+                <button class="btn btn-dark opacity-75 rounded-circle me-1 px-2 py-0">
+                  <i class="bi bi-chevron-compact-left"></i>
                 </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Pippo</a></li>
-                  <li><a class="dropdown-item" href="#">Goofy</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <button class="btn btn-dark opacity-75 rounded-circle px-2 py-0">
+                  <i class="bi bi-chevron-compact-right"></i>
+                </button>
               </div>
-            </div>
-          </div>
-          <!------>
-          <button id="showBtn" class="btn btn-dark border border-1 position-fixed top-1 end-0 d-none">&lt;</button>
-          <div id="currentAlbum" class="p-3 d-flex rounded-1 mb-3">
-            <div style="width: 180px" class="me-3">
-              <img src="./assets/imgs/main/image-1.jpg" class="w-100" />
+              <div id="acc">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-dark dropdown-toggle rounded-pill"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-person-circle"></i> Pippo 8
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Pippo</a></li>
+                    <li><a class="dropdown-item" href="#">Goofy</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <!------>
-            <div id="albumInfo" class="flex-grow-1">
-              <div id="albumHide" class="d-flex justify-content-between align-items-baseline">
-                <p class="text-uppercase fs-10 mt-5">Album</p>
+            <button id="showBtn" class="btn btn-dark border border-1 position-fixed top-1 end-0 d-none">&lt;</button>
+            <div id="currentAlbum" class="p-3 d-flex rounded-1 mb-3">
+              <div style="width: 200px" class="me-3">
+                <img src="./assets/imgs/main/image-1.jpg" class="shadow w-100" />
               </div>
-              <div id="info">
-                <h1>VIOLA</h1>
-                <div class="d-flex mt-4 align-content-center">
-                  <div style="width: 20px" class="d-flex">
-                    <img src="./assets/imgs/main/image-16.jpg" alt="artisticon" class="w-100 rounded-circle" />
-                    <p class="mx-1 fs-8 mb-0">blabla</p>
+              <!------>
+              <div id="albumInfo" class="flex-grow-1">
+                <div id="albumHide" class="d-flex justify-content-between align-items-baseline">
+                  <p class="text-uppercase fs-10 mt-5">Album</p>
+                </div>
+                <div id="info">
+                  <h1 class="display-2 fw-bold">VIOLA</h1>
+                  <div class="d-flex mt-3 align-content-center">
+                    <div style="width: 20px" class="d-flex">
+                      <img src="./assets/imgs/main/image-16.jpg" alt="artisticon" class="w-100 rounded-circle" />
+                      <p class="mx-1 fs-8 mb-0">blabla</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <!----->
-          <div id="playAlbum" class="mb-3">
-            <div id="albumBtn" class="d-flex align-items-center">
+          <div id="playAlbum" class="p-4 mb-3">
+            <div id="albumBtn" class="d-flex align-items-center mb-3">
               <button id="btnPlay" class="btn text-spotify-green border border-0 me-3 fs-1 p-0">
                 <i class="bi bi-play-circle-fill"></i>
               </button>
@@ -162,7 +162,7 @@
           </div>
         </main>
         <!--Aside-->
-        <aside id="aside" class="bg-black text-white-50 p-2" style="width: 25%">
+        <aside id="aside" class="flex-shrink-0 bg-black text-white-50 p-2" style="width: 15%">
           <div class="d-flex justify-content-between align-items-center px-0 py-3 mb-3">
             <h6 class="m-0">Attività amici</h6>
             <div class="d-flex align-items-center">
@@ -235,6 +235,7 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/js/index.js" type="module"></script>
+    <script src="./assets/js/activities.js" type="module"></script>
+    <script src="./assets/js/album.js" type="module"></script>
   </body>
 </html>

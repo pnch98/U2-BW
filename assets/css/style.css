@@ -12079,4 +12079,19 @@ main {
 
 .text-spotify-green {
   color: #1ed760;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#artistBack {
+  background-image: url("../../imgs/main/image-12.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.song:hover {
+  background-color: #2a2929;
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */

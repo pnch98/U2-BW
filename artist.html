@@ -83,9 +83,9 @@
           </nav>
         </div>
         <!--Main-->
-        <main class="flex-grow-1 spotify-bg text-white overflow-y-scroll p-4">
-          <div id="artistBack">
-            <div id="btn_acc" class="d-flex justify-content-between mt-3 mb-3">
+        <main class="flex-grow-1 spotify-bg text-white overflow-y-scroll overflow-x-hidden">
+          <div id="artistBack" class="d-flex flex-column justify-content-between p-4 pb-0">
+            <div id="btn_acc" class="d-flex justify-content-between mb-5">
               <div id="btns" class="d-flex">
                 <button class="btn btn-black opacity-75 rounded-circle text-white me-1 px-2 py-0">
                   <i class="bi bi-chevron-compact-left"></i>
@@ -114,43 +114,24 @@
             </div>
 
             <!------>
-            <button id="showBtn" class="btn btn-dark border border-1 position-fixed top-1 end-0 d-none">&lt;</button>
-            <div id="currentAlbum" class="p-3 d-flex rounded-1 mb-3">
-              <div style="width: 180px" class="me-3">
-                <img src="./assets/imgs/main/image-1.jpg" class="w-100" />
-              </div>
-              <!------>
-              <div id="albumInfo" class="flex-grow-1">
-                <div id="albumHide" class="d-flex justify-content-between align-items-baseline">
-                  <p class="text-uppercase fs-10 mt-5">Album</p>
-                </div>
-                <div id="info">
-                  <h1>VIOLA</h1>
-                  <div class="d-flex mt-4 align-content-center">
-                    <div style="width: 20px" class="d-flex">
-                      <img src="./assets/imgs/main/image-16.jpg" alt="artisticon" class="w-100 rounded-circle" />
-                      <p class="mx-1 fs-8 mb-0">blabla</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div id="currentArtist" class="mb-3"></div>
           </div>
+          <button id="showBtn" class="btn btn-dark border border-1 position-fixed top-1 end-0 d-none">&lt;</button>
           <!----->
-          <div id="playAlbum" class="mb-3">
-            <div id="albumBtn" class="d-flex align-items-center">
+          <div id="playAlbum" class="container-fluid p-3 mb-3">
+            <div id="albumBtn" class="d-flex align-items-center mb-3">
               <button id="btnPlay" class="btn text-spotify-green border border-0 me-3 fs-1 p-0">
                 <i class="bi bi-play-circle-fill"></i>
               </button>
               <button class="btn btn-outline-light me-3 fs-8 rounded-1">FOLLOWING</button>
-              <div class="text-white d-flex align-items-center fs-4 me-3">
+              <button class="btn text-white d-flex align-items-center fs-4 p-0">
                 <i class="bi bi-three-dots"></i>
-              </div>
+              </button>
             </div>
             <div id="song">
               <div class="row">
                 <div class="col-8">
-                  <h5>Popolari</h5>
+                  <h5 class="mb-4">Popolari</h5>
                   <div id="songList"></div>
                   <button class="btn py-0 text-uppercase text-white-50 fs-9">visualizza altro</button>
                 </div>
@@ -236,6 +217,7 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/js/index.js" type="module"></script>
+    <script src="./assets/js/activities.js" type="module"></script>
+    <script src="./assets/js/artist.js" type="module"></script>
   </body>
 </html>

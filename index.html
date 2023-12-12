@@ -12,7 +12,7 @@
     <div class="container-fluid p-0">
       <div class="d-flex">
         <!--Navbar-->
-        <div class="bg-black" style="width: 30%">
+        <div class="bg-black flex-shrink-0" style="width: 18%">
           <nav class="navbar navbar-expand-lg">
             <div
               class="container-fluid flex-column align-items-start border border-1 border-dark border-top-0 border-end-0 border-start-0 px-2 pb-3"
@@ -52,9 +52,7 @@
                     >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white-50 fw-semibold" href="#"
-                      ><i class="bi bi-search me-1"></i> Cerca</a
-                    >
+                    <a class="nav-link text-white-50 fw-semibold" href="#"><i class="bi bi-search me-1"></i> Cerca</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-white-50 fw-semibold" href="#"
@@ -117,7 +115,7 @@
           <button id="showBtn" class="btn btn-dark border border-1 position-fixed top-1 end-0 d-none">&lt;</button>
           <div id="ads" class="p-3 d-flex bg-banner rounded-1 mb-3">
             <div style="height: 200px; width: auto" class="me-3">
-              <img src="./assets/imgs/main/image-1.jpg" class="h-100" />
+              <img id="adImg" src="./assets/imgs/main/image-1.jpg" class="h-100" />
             </div>
             <div id="album" class="d-flex flex-column justify-content-between flex-grow-1">
               <div>
@@ -145,109 +143,93 @@
             </div>
           </div>
           <!----->
-          <div id="buonasera" class="mb-4">
+          <div id="buonasera" class="mb-5">
             <h3>Buonasera</h3>
-            <div class="row row-cols-3 gy-2 gx-3">
-              <div class="col">
-                <div class="d-flex rounded bg-dark align-items-center">
-                  <div style="width: 75px" class="me-2">
-                    <img src="assets/imgs/main/image-1.jpg" alt="img10" class="w-100 rounded-start" />
-                  </div>
-                  <div>
-                    <p class="fs-6 m-0">early stage emily syndrome (sett-ott 2022)</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="d-flex rounded bg-dark align-items-center">
-                  <div style="width: 75px" class="me-2">
-                    <img src="assets/imgs/main/image-1.jpg" alt="img10" class="w-100 rounded-start" />
-                  </div>
-                  <div>
-                    <p class="fs-6 m-0">early stage emily syndrome (sett-ott 2022)</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="d-flex rounded bg-dark align-items-center">
-                  <div style="width: 75px" class="me-2">
-                    <img src="assets/imgs/main/image-1.jpg" alt="img10" class="w-100 rounded-start" />
-                  </div>
-                  <div>
-                    <p class="fs-6 m-0">early stage emily syndrome (sett-ott 2022)</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="d-flex rounded bg-dark align-items-center">
-                  <div style="width: 75px" class="me-2">
-                    <img src="assets/imgs/main/image-1.jpg" alt="img10" class="w-100 rounded-start" />
-                  </div>
-                  <div>
-                    <p class="fs-6 m-0">early stage emily syndrome (sett-ott 2022)</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="d-flex rounded bg-dark align-items-center">
-                  <div style="width: 75px" class="me-2">
-                    <img src="assets/imgs/main/image-1.jpg" alt="img10" class="w-100 rounded-start" />
-                  </div>
-                  <div>
-                    <p class="fs-6 m-0">early stage emily syndrome (sett-ott 2022)</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="d-flex rounded bg-dark align-items-center">
-                  <div style="width: 75px" class="me-2">
-                    <img src="assets/imgs/main/image-1.jpg" alt="img10" class="w-100 rounded-start" />
-                  </div>
-                  <div>
-                    <p class="fs-6 m-0">early stage emily syndrome (sett-ott 2022)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div id="smCards" class="row row-cols-3 gy-3 gx-3"></div>
           </div>
           <!----->
-          <div id="other">
+          <div id="other" class="mb-5">
             <div class="d-flex justify-content-between align-items-center">
               <h5>Altro di ciò che ti piace</h5>
               <button class="btn btn-secondary rounded-pill py-0 text-uppercase fs-10">visualizza tutto</button>
             </div>
+
             <div class="row row-cols-5 gx-3">
               <div class="col">
                 <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-16.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
+                  <img src="assets/imgs/main/image-1.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
                   <h6 class="fs-10">Hot Hits Italia</h6>
                   <p class="fs-10 mb-0">La playlist più brutta del momento</p>
                 </div>
               </div>
               <div class="col">
                 <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-16.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
+                  <img src="assets/imgs/main/image-2.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
                   <h6 class="fs-10">Hot Hits Italia</h6>
                   <p class="fs-10 mb-0">La playlist più brutta del momento</p>
                 </div>
               </div>
               <div class="col">
                 <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-16.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
+                  <img src="assets/imgs/main/image-3.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
                   <h6 class="fs-10">Hot Hits Italia</h6>
                   <p class="fs-10 mb-0">La playlist più brutta del momento</p>
                 </div>
               </div>
               <div class="col">
                 <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-16.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
+                  <img src="assets/imgs/main/image-4.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
                   <h6 class="fs-10">Hot Hits Italia</h6>
                   <p class="fs-10 mb-0">La playlist più brutta del momento</p>
                 </div>
               </div>
               <div class="col">
                 <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-16.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
+                  <img src="assets/imgs/main/image-5.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
+                  <h6 class="fs-10">Hot Hits Italia</h6>
+                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="other2">
+            <div class="d-flex justify-content-between align-items-center">
+              <h5>Altro di altro di ciò che ti piace ancora di più altro</h5>
+              <button class="btn btn-secondary rounded-pill py-0 text-uppercase fs-10">visualizza tutto</button>
+            </div>
+
+            <div class="row row-cols-5 gx-3">
+              <div class="col">
+                <div class="p-2 bg-dark rounded-1">
+                  <img src="assets/imgs/main/image-7.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
+                  <h6 class="fs-10">Hot Hits Italia</h6>
+                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="p-2 bg-dark rounded-1">
+                  <img src="assets/imgs/main/image-8.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
+                  <h6 class="fs-10">Hot Hits Italia</h6>
+                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="p-2 bg-dark rounded-1">
+                  <img src="assets/imgs/main/image-9.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
+                  <h6 class="fs-10">Hot Hits Italia</h6>
+                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="p-2 bg-dark rounded-1">
+                  <img src="assets/imgs/main/image-10.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
+                  <h6 class="fs-10">Hot Hits Italia</h6>
+                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="p-2 bg-dark rounded-1">
+                  <img src="assets/imgs/main/image-11.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
                   <h6 class="fs-10">Hot Hits Italia</h6>
                   <p class="fs-10 mb-0">La playlist più brutta del momento</p>
                 </div>
@@ -256,7 +238,7 @@
           </div>
         </main>
         <!--Aside-->
-        <aside id="aside" class="bg-black text-white-50 p-2" style="width: 25%">
+        <aside id="aside" class="flex-shrink-0 bg-black text-white-50 p-2" style="width: 15%">
           <div class="d-flex justify-content-between align-items-center px-0 py-3 mb-3">
             <h6 class="m-0">Attività amici</h6>
             <div class="d-flex align-items-center">
@@ -329,6 +311,8 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./assets/js/activities.js" type="module"></script>
     <script src="./assets/js/index.js" type="module"></script>
   </body>
 </html>
