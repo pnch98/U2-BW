@@ -14,7 +14,9 @@
         <!--Navbar-->
         <div class="bg-black" style="width: 16.7%">
           <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid flex-column align-items-start">
+            <div
+              class="container-fluid flex-column align-items-start border border-1 border-dark border-top-0 border-end-0 border-start-0 px-2 pb-3"
+            >
               <button
                 class="navbar-toggler"
                 type="button"
@@ -30,7 +32,7 @@
                 <ul class="navbar-nav flex-column mb-3">
                   <li class="nav-item dropdown">
                     <a
-                      class="nav-link fs-4 text-white-50"
+                      class="nav-link fs-5 text-white-50 pt-3 pb-0"
                       href="#"
                       role="button"
                       data-bs-toggle="dropdown"
@@ -81,13 +83,17 @@
           </nav>
         </div>
         <!--Main-->
+<<<<<<< Updated upstream
         <div class="flex-grow-1 spotify-bg text-white">
+=======
+        <main class="flex-grow-1 spotify-bg text-white overflow-y-scroll p-4">
+>>>>>>> Stashed changes
           <div id="btn_acc" class="d-flex justify-content-between mt-3 mb-3">
             <div id="btns" class="d-flex">
-              <button class="btn btn-dark opacity-75 rounded-circle me-1 px-2 py-0">
+              <button class="btn btn-black opacity-75 rounded-circle text-white me-1 px-2 py-0">
                 <i class="bi bi-chevron-compact-left"></i>
               </button>
-              <button class="btn btn-dark opacity-75 rounded-circle px-2 py-0">
+              <button class="btn btn-black opacity-75 rounded-circle text-white px-2 py-0">
                 <i class="bi bi-chevron-compact-right"></i>
               </button>
             </div>
@@ -111,30 +117,38 @@
           </div>
           <!------>
           <button id="showBtn" class="btn btn-dark border border-1 position-fixed top-1 end-0 d-none">&lt;</button>
-          <div id="ads" class="p-3 d-flex bg-dark rounded-1 mb-3">
-            <div style="width: 180px" class="me-3">
-              <img src="./assets/imgs/main/image-1.jpg" class="w-100" />
+          <div id="ads" class="p-3 d-flex bg-banner rounded-1 mb-3">
+            <div style="height: 200px; width: auto" class="me-3">
+              <img src="./assets/imgs/main/image-1.jpg" class="h-100" />
             </div>
-            <div id="album" class="flex-grow-1">
-              <div id="albumHide" class="d-flex justify-content-between align-items-center">
-                <p class="text-uppercase fs-10">Album</p>
-                <button class="btn btn-secondary rounded-pill py-0 text-uppercase fs-10">nascondi annunci</button>
+            <div id="album" class="d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <div id="albumHide" class="d-flex justify-content-between align-items-center">
+                  <p class="text-uppercase fs-8 mb-0">Album</p>
+                  <button class="btn btn-dark rounded-pill py-0 text-uppercase text-white-50 fs-9">
+                    nascondi annunci
+                  </button>
+                </div>
+
+                <h1 class="display-2 fw-bold mb-0">VIOLA (feat. Dio)</h1>
+                <p class="fs-8">Autori</p>
               </div>
-              <div id="info">
-                <h1>VIOLA</h1>
-                <p>Autori</p>
-                <p>blabla</p>
-              </div>
-              <div id="albumBtn" class="d-flex">
-                <button class="btn btn-success rounded-pill text-black px-3 me-2 fs-8">Play</button>
-                <button class="btn border border-1 rounded-pill text-white-50 px-3 fs-8">Salva</button>
-                <button class="btn text-white fs-6 d-flex align-items-center"><i class="bi bi-three-dots"></i></button>
+              <div>
+                <p class="fs-8 mb-1">Ascolta</p>
+
+                <div id="albumBtn" class="d-flex">
+                  <button class="btn spotify-green-bg rounded-pill px-3 me-2 fs-7">Play</button>
+                  <button class="btn btn-save border border-1 rounded-pill px-3 fs-7">Salva</button>
+                  <button class="btn text-white fs-6 d-flex align-items-center">
+                    <i class="bi bi-three-dots"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
           <!----->
-          <div id="buonasera" class="mb-3">
-            <h4>Buonasera</h4>
+          <div id="buonasera" class="mb-4">
+            <h3>Buonasera</h3>
             <div class="row row-cols-3 gy-2 gx-3">
               <div class="col">
                 <div class="d-flex rounded bg-dark align-items-center">
@@ -244,46 +258,60 @@
           </div>
         </div>
         <!--Aside-->
+<<<<<<< Updated upstream
         <aside id="aside" class="bg-black text-white-50 p-2" style="width: 16.7%">
           <div class="d-flex justify-content-between px-0 py-3">
             <h6>Attività amici</h6>
             <div>
+=======
+        <aside id="aside" class="bg-black text-white-50 p-2" style="width: 25%">
+          <div class="d-flex justify-content-between align-items-center px-0 py-3 mb-3">
+            <h6 class="m-0">Attività amici</h6>
+            <div class="d-flex align-items-center">
+>>>>>>> Stashed changes
               <i class="bi bi-person-add me-1"></i>
-              <button id="activitiesBtn" class="btn text-white-50 p-0"><i class="bi bi-x-lg me-2"></i></button>
+              <button id="activitiesBtn" class="btn text-white-50 p-0 m-0"><i class="bi bi-x-lg"></i></button>
             </div>
           </div>
-          <div class="d-flex mb-4">
-            <div style="width: 30px" class="me-1">
-              <img src="assets/imgs/main/image-2.jpg" alt="image-2" class="rounded-circle w-100" />
+
+          <div class="d-flex justify-content-between mb-2">
+            <div class="d-flex">
+              <div style="width: 30px" class="pt-1 me-2">
+                <img src="assets/imgs/main/image-2.jpg" alt="image-2" class="rounded-circle w-100" />
+              </div>
+              <div>
+                <b class="fs-7">Pietro Semeraro</b>
+                <p class="fs-10 m-0">Ho una famiglia • e un giardino</p>
+                <p class="fs-10 m-0"><i class="bi bi-disc"></i> EP III</p>
+              </div>
             </div>
-            <div>
-              <b>Pietro Semeraro</b>
-              <p class="fs-10 m-0">Ho una famiglia • e un giardino</p>
-              <p class="fs-10 m-0"><i class="bi bi-disc"></i> EP III</p>
-            </div>
-            <div><p class="fs-10">4 ore</p></div>
+            <div><p class="pt-1 fs-9">4 ore</p></div>
           </div>
-          <div class="d-flex mb-4">
-            <div style="width: 30px" class="me-1">
-              <img src="assets/imgs/main/image-2.jpg" alt="image-2" class="rounded-circle w-100" />
+          <div class="d-flex justify-content-between mb-2">
+            <div class="d-flex">
+              <div style="width: 30px" class="pt-1 me-2">
+                <img src="assets/imgs/main/image-2.jpg" alt="image-2" class="rounded-circle w-100" />
+              </div>
+              <div>
+                <b class="fs-7">Pietro Semeraro</b>
+                <p class="fs-10 m-0">Ho una famiglia • e un giardino</p>
+                <p class="fs-10 m-0"><i class="bi bi-disc"></i> EP III</p>
+              </div>
             </div>
-            <div>
-              <b>Pietro Semeraro</b>
-              <p class="fs-10 m-0">Ho una famiglia • e un giardino</p>
-              <p class="fs-10 m-0"><i class="bi bi-disc"></i> EP III</p>
-            </div>
-            <div><p class="fs-10">4 ore</p></div>
+            <div><p class="pt-1 fs-9">4 ore</p></div>
           </div>
-          <div class="d-flex mb-4">
-            <div style="width: 30px" class="me-1">
-              <img src="assets/imgs/main/image-2.jpg" alt="image-2" class="rounded-circle w-100" />
+          <div class="d-flex justify-content-between mb-2">
+            <div class="d-flex">
+              <div style="width: 30px" class="pt-1 me-2">
+                <img src="assets/imgs/main/image-2.jpg" alt="image-2" class="rounded-circle w-100" />
+              </div>
+              <div>
+                <b class="fs-7">Pietro Semeraro</b>
+                <p class="fs-10 m-0">Ho una famiglia • e un giardino</p>
+                <p class="fs-10 m-0"><i class="bi bi-disc"></i> EP III</p>
+              </div>
             </div>
-            <div>
-              <b>Pietro Semeraro</b>
-              <p class="fs-10 m-0">Ho una famiglia • e un giardino</p>
-              <p class="fs-10 m-0"><i class="bi bi-disc"></i> EP III</p>
-            </div>
-            <div><p class="fs-10">4 ore</p></div>
+            <div><p class="pt-1 fs-9">4 ore</p></div>
           </div>
         </aside>
       </div>
