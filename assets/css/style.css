@@ -12075,4 +12075,8 @@ main {
 
 .col > div {
   cursor: pointer;
+}
+
+.text-spotify-green {
+  color: #1ed760;
 }/*# sourceMappingURL=style.css.map */

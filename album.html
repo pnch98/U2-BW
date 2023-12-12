@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/dist/css/style.min.css" />
+    <link rel="stylesheet" href="./assets/css/circular-font.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <div class="d-flex">
+        <!--Navbar-->
+        <div class="bg-black" style="width: 30%">
+          <nav class="navbar navbar-expand-lg">
+            <div
+              class="container-fluid flex-column align-items-start border border-1 border-dark border-top-0 border-end-0 border-start-0 px-2 pb-3"
+            >
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse flex-column align-items-start" id="navbarNav">
+                <ul class="navbar-nav flex-column mb-3">
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link fs-5 text-white-50 pt-3 pb-0"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <i class="bi bi-three-dots"></i>
+                    </a>
+                    <ul class="dropdown-menu bg-secondary">
+                      <li><a class="dropdown-item" href="#">File</a></li>
+                      <li><a class="dropdown-item" href="#">Robe</a></li>
+                      <li><a class="dropdown-item" href="#">Pippo</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white-50 fw-semibold active" aria-current="page" href="#"
+                      ><i class="bi bi-house-door-fill me-1"></i> Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white-50 fw-semibold" href="#"
+                      ><i class="bi bi-search me-1"></i> Cerca</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white-50 fw-semibold" href="#"
+                      ><i class="bi bi-collection me-1"></i> La tua libreria</a
+                    >
+                  </li>
+                </ul>
+
+                <ul class="navbar-nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link text-white-50 fw-semibold" aria-current="page" href="#">
+                      <i class="bi bi-plus-square-fill me-1"></i> Crea playlist</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white-50 fw-semibold" href="#"
+                      ><i class="bi bi-heart-fill me-1"></i> Brani che ti piacciono</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white-50 fw-semibold" href="#"
+                      ><i class="bi bi-bookmark-fill me-1"></i> I tuoi episodi</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!--Main-->
+        <main class="flex-grow-1 spotify-bg text-white overflow-y-scroll p-4">
+          <div id="btn_acc" class="d-flex justify-content-between mt-3 mb-3">
+            <div id="btns" class="d-flex">
+              <button class="btn btn-dark opacity-75 rounded-circle me-1 px-2 py-0">
+                <i class="bi bi-chevron-compact-left"></i>
+              </button>
+              <button class="btn btn-dark opacity-75 rounded-circle px-2 py-0">
+                <i class="bi bi-chevron-compact-right"></i>
+              </button>
+            </div>
+            <div id="acc">
+              <div class="dropdown">
+                <button
+                  class="btn btn-dark dropdown-toggle rounded-pill"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-person-circle"></i> Pippo 8
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Pippo</a></li>
+                  <li><a class="dropdown-item" href="#">Goofy</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!------>
+          <button id="showBtn" class="btn btn-dark border border-1 position-fixed top-1 end-0 d-none">&lt;</button>
+          <div id="currentAlbum" class="p-3 d-flex rounded-1 mb-3">
+            <div style="width: 180px" class="me-3">
+              <img src="./assets/imgs/main/image-1.jpg" class="w-100" />
+            </div>
+            <!------>
+            <div id="albumInfo" class="flex-grow-1">
+              <div id="albumHide" class="d-flex justify-content-between align-items-baseline">
+                <p class="text-uppercase fs-10 mt-5">Album</p>
+              </div>
+              <div id="info">
+                <h1>VIOLA</h1>
+                <div class="d-flex mt-4 align-content-center">
+                  <div style="width: 20px" class="d-flex">
+                    <img src="./assets/imgs/main/image-16.jpg" alt="artisticon" class="w-100 rounded-circle" />
+                    <p class="mx-1 fs-8 mb-0">blabla</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!----->
+          <div id="playAlbum" class="mb-3">
+            <div id="albumBtn" class="d-flex align-items-center">
+              <button id="btnPlay" class="btn text-spotify-green border border-0 me-3 fs-1 p-0">
+                <i class="bi bi-play-circle-fill"></i>
+              </button>
+              <div class="text-white fs-3 me-3"><i class="bi bi-heart me-1"></i></div>
+              <div class="text-white d-flex align-items-center fs-4">
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+            <div id="albumTable">
+              <table class="w-100">
+                <thead class="border border-1 border-top-0 border-end-0 border-start-0">
+                  <tr class="">
+                    <th>#</th>
+                    <th>Titolo</th>
+                    <th>Riproduzioni</th>
+                    <th>O</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </main>
+        <!--Aside-->
+        <aside id="aside" class="bg-black text-white-50 p-2" style="width: 25%">
+          <div class="d-flex justify-content-between align-items-center px-0 py-3 mb-3">
+            <h6 class="m-0">Attività amici</h6>
+            <div class="d-flex align-items-center">
+              <i class="bi bi-person-add me-1"></i>
+              <button id="activitiesBtn" class="btn text-white-50 p-0 m-0"><i class="bi bi-x-lg"></i></button>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between mb-2">
+            <div class="d-flex">
+              <div style="width: 30px" class="pt-1 me-2">
+                <img src="assets/imgs/main/image-2.jpg" alt="image-2" class="rounded-circle w-100" />
+              </div>
+              <div>
+                <b class="fs-7">Pietro Semeraro</b>
+                <p class="fs-10 m-0">Ho una famiglia • e un giardino</p>
+                <p class="fs-10 m-0"><i class="bi bi-disc"></i> EP III</p>
+              </div>
+            </div>
+            <div><p class="pt-1 fs-9">4 ore</p></div>
+          </div>
+          <div class="d-flex justify-content-between mb-2">
+            <div class="d-flex">
+              <div style="width: 30px" class="pt-1 me-2">
+                <img src="assets/imgs/main/image-2.jpg" alt="image-2" class="rounded-circle w-100" />
+              </div>
+              <div>
+                <b class="fs-7">Pietro Semeraro</b>
+                <p class="fs-10 m-0">Ho una famiglia • e un giardino</p>
+                <p class="fs-10 m-0"><i class="bi bi-disc"></i> EP III</p>
+              </div>
+            </div>
+            <div><p class="pt-1 fs-9">4 ore</p></div>
+          </div>
+          <div class="d-flex justify-content-between mb-2">
+            <div class="d-flex">
+              <div style="width: 30px" class="pt-1 me-2">
+                <img src="assets/imgs/main/image-2.jpg" alt="image-2" class="rounded-circle w-100" />
+              </div>
+              <div>
+                <b class="fs-7">Pietro Semeraro</b>
+                <p class="fs-10 m-0">Ho una famiglia • e un giardino</p>
+                <p class="fs-10 m-0"><i class="bi bi-disc"></i> EP III</p>
+              </div>
+            </div>
+            <div><p class="pt-1 fs-9">4 ore</p></div>
+          </div>
+        </aside>
+      </div>
+      <!--Footer-->
+      <footer class="spotify-bg text-white d-flex justify-content-between align-items-center">
+        <div class="d-flex p-3 align-items-center">
+          <div style="width: 60px"><img src="./assets/imgs/main/image-14.jpg" alt="img14" class="w-100" /></div>
+          <div><p class="mb-0">Allenati a casa</p></div>
+          <div><i class="bi bi-heart me-1"></i></div>
+        </div>
+        <div>Placeholder</div>
+        <div>Placeholder</div>
+      </footer>
+      <!--Link js-->
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/index.js" type="module"></script>
+  </body>
+</html>
