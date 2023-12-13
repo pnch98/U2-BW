@@ -1,4 +1,4 @@
-const url = "https://deezerdevs-deezer.p.rapidapi.com/album/103248";
+const url = "https://deezerdevs-deezer.p.rapidapi.com/album/10709540";
 
 const options = {
   method: "GET",
@@ -62,12 +62,18 @@ function showResults(album) {
 }
 
 function showCover(album) {
+  const coverBg = document.getElementById("currentAlbum");
+  coverBg.style = `background-image: url()`;
+
   const img = document.getElementById("currentAlbum").querySelector("img");
   img.src = album.cover_medium;
+
   const title = document.getElementById("info").querySelector("h1");
   title.innerHTML = album.title;
+
   const photoArt = document.getElementById("photoArt").querySelector("img");
   photoArt.src = album.artist.picture_small;
+
   const description = document.getElementById("photoArt").querySelector("p");
   const resto = album.duration % 60 < 10 ? "0" + (album.duration % 60) : album.duration % 60;
   description.innerHTML = `
