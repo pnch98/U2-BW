@@ -1,4 +1,4 @@
-import { token } from "./token.js";
+// import { token } from "./token.js";
 
 const playlists = document.getElementById("playlists");
 const resultPage = document.getElementById("results");
@@ -161,6 +161,10 @@ function showSongs(result) {
     name.className = "mb-0";
     name.innerHTML = song.title;
 
+    const songArt = document.createElement("p");
+    songArt.className = "fs-8 mb-0";
+    songArt.innerHTML = song.artist.name;
+
     const divDur = document.createElement("div");
     const duration = document.createElement("p");
     duration.className = "mb-0 ms-auto";
@@ -171,6 +175,7 @@ function showSongs(result) {
     divName.appendChild(name);
     divDur.appendChild(duration);
 
+    divName.appendChild(songArt);
     div1.appendChild(divImg);
     div1.appendChild(divName);
 

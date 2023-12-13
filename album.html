@@ -47,12 +47,14 @@
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white-50 fw-semibold active" aria-current="page" href="#"
+                    <a class="nav-link text-white-50 fw-semibold active" aria-current="page" href="index.html"
                       ><i class="bi bi-house-door-fill me-1"></i> Home</a
                     >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white-50 fw-semibold" href="#"><i class="bi bi-search me-1"></i> Cerca</a>
+                    <a class="nav-link text-white-50 fw-semibold" href="search.html"
+                      ><i class="bi bi-search me-1"></i> Cerca</a
+                    >
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-white-50 fw-semibold" href="#"
@@ -116,22 +118,22 @@
             <button id="showBtn" class="btn btn-black rounded-end-0 position-fixed custom-fixed d-none">
               <i class="bi bi-chevron-compact-left text-white-50"></i>
             </button>
-            <div id="currentAlbum" class="p-3 d-flex rounded-1 mb-3">
-              <div style="width: 200px" class="me-3">
+            <div id="currentAlbum" class="p-3 d-flex align-items-center rounded-1 mb-3">
+              <div style="width: 200px" class="me-3 flex-shrink-0">
                 <img src="./assets/imgs/main/image-1.jpg" class="shadow w-100" />
               </div>
               <!------>
               <div id="albumInfo" class="flex-grow-1">
-                <div id="albumHide" class="d-flex justify-content-between align-items-baseline">
-                  <p class="text-uppercase fs-10 mt-5">Album</p>
+                <div id="albumHide" class="d-flex justify-content-between">
+                  <p class="text-uppercase fs-10 mt-3">Album</p>
                 </div>
                 <div id="info">
-                  <h1 class="display-2 fw-bold">VIOLA</h1>
-                  <div class="d-flex mt-3 align-content-center">
+                  <h1 class="display-2 fw-bold" style="line-height: 1">VIOLA</h1>
+                  <div id="photoArt" class="d-flex mt-3 align-content-center">
                     <div style="width: 20px" class="d-flex">
                       <img src="./assets/imgs/main/image-16.jpg" alt="artisticon" class="w-100 rounded-circle" />
-                      <p class="mx-1 fs-8 mb-0">blabla</p>
                     </div>
+                    <p class="mx-1 fs-8 mb-0">blabla</p>
                   </div>
                 </div>
               </div>
@@ -150,16 +152,16 @@
               </div>
             </div>
             <div id="albumTable">
-              <table class="w-100">
-                <thead class="border border-1 border-top-0 border-end-0 border-start-0">
+              <table class="w-100" cellpadding="10">
+                <thead class="border border-1 border-top-0 border-end-0 border-start-0 mb-2">
                   <tr class="">
                     <th>#</th>
                     <th>Titolo</th>
                     <th>Riproduzioni</th>
-                    <th>O</th>
+                    <th><i class="bi bi-clock"></i></th>
                   </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody id="song"></tbody>
               </table>
             </div>
           </div>
@@ -238,6 +240,8 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/token.js"></script>
+
     <script src="./assets/js/activities.js" type="module"></script>
     <script src="./assets/js/album.js" type="module"></script>
   </body>
