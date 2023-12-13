@@ -1,5 +1,5 @@
-const url = "https://deezerdevs-deezer.p.rapidapi.com/album/10709540";
-
+const url = "https://deezerdevs-deezer.p.rapidapi.com/album/";
+const albumId = new URLSearchParams(window.location.search).get("albumId");
 const options = {
   method: "GET",
   headers: {
@@ -8,17 +8,20 @@ const options = {
   },
 };
 
-fetch(url, options)
-  .then((resp) => {
-    if (resp.ok) {
-      return resp.json();
-    }
-  })
-  .then((obj) => {
-    showCover(obj);
-    showResults(obj.tracks.data);
-    console.log(obj);
-  });
+window.addEventListener("DOMContentLoaded", () => {
+  fetch(url + albumId, options)
+    .then((resp) => {
+      if (resp.ok) {
+        return resp.json();
+      }
+    })
+    .then((obj) => {
+      showCover(obj);
+      showResults(obj.tracks.data);
+      console.log(obj);
+    });
+  console.log(id);
+});
 
 const songDiv = document.getElementById("song");
 

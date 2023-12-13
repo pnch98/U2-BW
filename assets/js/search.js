@@ -74,6 +74,10 @@ function showArtist(result) {
   div.style = "width: 300px; cursor: pointer";
   div.className = "d-flex align-items-center bg-black rounded-2 me-4";
 
+  div.addEventListener("click", function () {
+    openArtistPage(result.artist.id);
+  });
+
   const inDiv1 = document.createElement("div");
   inDiv1.className = "rounded-2 me-2";
   inDiv1.style = `
@@ -112,6 +116,10 @@ function showAlbum(result, divAA) {
   const div = document.createElement("div");
   div.style = "cursor: pointer";
   div.className = "d-flex align-items-center bg-black rounded-2 me-4";
+
+  div.addEventListener("click", function () {
+    openAlbumPage(result.album.id);
+  });
 
   const inDiv1 = document.createElement("div");
   inDiv1.className = "rounded-2 me-2";
@@ -184,4 +192,12 @@ function showSongs(result) {
 
     resultPage.appendChild(container);
   });
+}
+
+function openArtistPage(id) {
+  window.location.assign("./artist.html?artistId=" + id);
+}
+
+function openAlbumPage(id) {
+  window.location.assign("./album.html?albumId=" + id);
 }

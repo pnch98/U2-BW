@@ -1,7 +1,7 @@
 // import { token } from "./token.js";
 
 const url = "https://deezerdevs-deezer.p.rapidapi.com/artist/";
-const myValue = "13";
+const artistId = new URLSearchParams(window.location.search).get("artistId");
 const options = {
   method: "GET",
   headers: {
@@ -9,6 +9,11 @@ const options = {
     "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
   },
 };
+
+window.addEventListener("DOMContentLoaded", () => {
+  search(artistId);
+  console.log(id);
+});
 
 function search(value) {
   fetch(url + value, options)
@@ -31,11 +36,9 @@ function search(value) {
         <p>${artist.nb_fan} ascoltatori mensili</p>
         `;
 
-      searchSongs(myValue);
-      console.log(artist.data);
+      searchSongs(artistId);
     });
 }
-search(myValue);
 
 const lista = document.getElementById("songList");
 
@@ -47,7 +50,7 @@ function searchSongs(id) {
       }
     })
     .then((songs) => {
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 10; i++) {
         const row = document.createElement("div");
         row.className = "row d-flex mb-3 g-0 song";
 
@@ -93,7 +96,9 @@ function searchSongs(id) {
         inDiv4.className = "col-2 d-flex justify-content-center align-items-center text-white-50";
         const duration = document.createElement("p");
         duration.className = "mb-0";
-        duration.innerHTML = `${parseInt(songs.data[i].duration / 60)}:${songs.data[i].duration % 60} `;
+        const resto =
+          songs.data[i].duration % 60 < 10 ? "0" + (songs.data[i].duration % 60) : songs.data[i].duration % 60;
+        duration.innerHTML = `${parseInt(songs.data[i].duration / 60)}:${resto}`;
         inDiv4.appendChild(duration);
 
         row.appendChild(inDiv1);
