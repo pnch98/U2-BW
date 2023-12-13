@@ -107,6 +107,21 @@ function searchSongs(id) {
         row.appendChild(inDiv4);
 
         lista.appendChild(row);
+        row.addEventListener("click", function () {
+          const footerImg = document.getElementById("footerImg").querySelector("img");
+          footerImg.src = songs.data[i].album["cover_small"];
+          const footerSong = document.getElementById("footerSong").querySelectorAll("p");
+          footerSong[0].innerHTML = songs.data[i].title;
+          footerSong[1].innerHTML = songs.data[i].artist.name;
+          const audioContainer = document.getElementById("audioPlayer");
+          audioContainer.src = songs.data[i].preview;
+          const progressBar = document.getElementById("progressBar");
+          progressBar.style.width = 0;
+          const playPauseBtn = document.getElementById("playPauseBtn");
+          const audio = document.getElementById("audioPlayer");
+          audio.play();
+          playPauseBtn.innerHTML = '<i class="bi bi-pause-circle-fill"></i>';
+        });
       }
     });
 }

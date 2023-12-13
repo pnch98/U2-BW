@@ -60,6 +60,21 @@ function showResults(album) {
     tr.appendChild(td3);
     tr.appendChild(td4);
     songDiv.appendChild(tr);
+    tr.addEventListener("click", function () {
+      const footerImg = document.getElementById("footerImg").querySelector("img");
+      footerImg.src = song.album["cover_small"];
+      const footerSong = document.getElementById("footerSong").querySelectorAll("p");
+      footerSong[0].innerHTML = song.title;
+      footerSong[1].innerHTML = song.artist.name;
+      const audioContainer = document.getElementById("audioPlayer");
+      audioContainer.src = song.preview;
+      const progressBar = document.getElementById("progressBar");
+      progressBar.style.width = 0;
+      const playPauseBtn = document.getElementById("playPauseBtn");
+      const audio = document.getElementById("audioPlayer");
+      audio.play();
+      playPauseBtn.innerHTML = '<i class="bi bi-pause-circle-fill"></i>';
+    });
     i += 1;
   });
 }
