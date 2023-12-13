@@ -19,7 +19,7 @@ for (let i = 0; i < 36; i++) {
   const div = document.createElement("div");
   //   const title = document.createElement("h5");
   const img = document.createElement("img");
-  img.src = `../imgs/search/image-${i + 1}.jpg`;
+  img.src = `./assets/imgs/search/image-${i + 1}.jpg`;
   img.className = "w-100 zoom rounded-2";
 
   div.appendChild(img);
