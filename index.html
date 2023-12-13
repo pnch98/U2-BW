@@ -293,14 +293,34 @@
         </aside>
       </div>
       <!--Footer-->
-      <footer class="spotify-bg text-white d-flex justify-content-between align-items-center">
-        <div class="d-flex p-3 align-items-center">
-          <div style="width: 60px"><img src="./assets/imgs/main/image-14.jpg" alt="img14" class="w-100" /></div>
-          <div><p class="mb-0">Allenati a casa</p></div>
+      <footer class="spotify-bg text-white d-flex justify-content-between align-items-center px-3">
+        <div class="d-flex align-items-center">
+          <div class="me-3" style="width: 60px">
+            <img src="./assets/imgs/main/image-14.jpg" alt="img14" class="w-100" />
+          </div>
+          <div class="me-3">
+            <p class="mb-0">Canzone</p>
+            <p class="fs-8 mb-0">Autore</p>
+          </div>
           <div><i class="bi bi-heart me-1"></i></div>
         </div>
-        <div>Placeholder</div>
-        <div>Placeholder</div>
+        <div class="text-center">
+          <div>
+            <button class="btn text-white-50 border border-0"><i class="bi bi-skip-start-fill"></i></i></button>
+            <button class="btn text-white-50 border border-0"><i class="bi bi-shuffle"></i></button>
+            <button class="btn text-white-50 border border-0 fs-2"><i class="bi bi-play-circle-fill"></i></button>
+            <button class="btn text-white-50 border border-0"><i class="bi bi-skip-end-fill"></i></button>
+            <button class="btn text-white-50 border border-0"><i class="bi bi-repeat"></i></button>
+          </div>
+          <div>Barra magica</div>
+        </div>
+        <div class="d-flex align-items-center"> 
+          <button class="btn text-white-50 border border-0"><i class="bi bi-mic"></i></button>
+          <button class="btn text-white-50 border border-0 p-0"><i class="bi bi-pause-circle-fill"></i></button>
+          <button class="btn text-white-50 border border-0"><i class="bi bi-pc-display"></i></button>
+          <label class="fs-3 text-white-50" for="volume"><i class="bi bi-volume-down"></i></label> 
+          <input type="range" id="volume" name="volume" min="0" max="100" />
+          </div>
       </footer>
       <!--Link js-->
     </div>
