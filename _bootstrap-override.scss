@@ -12,6 +12,8 @@ $h8-font-size: $font-size-base * 0.75 !default;
 $h9-font-size: $font-size-base * 0.65 !default;
 $h10-font-size: $font-size-base * 0.5 !default;
 
+$spotify-gray: #242424;
+
 @import "./bootstrap/scss/maps";
 
 $custom-font-sizes: (
@@ -21,6 +23,12 @@ $custom-font-sizes: (
   10: $h10-font-size,
 );
 $font-sizes: map-merge($font-sizes, $custom-font-sizes);
+
+$custom-theme-colors: (
+  spotify-gray: $spotify-gray,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
 
 @import "./bootstrap/scss/mixins";
 @import "./bootstrap/scss/utilities";

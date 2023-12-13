@@ -37,6 +37,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
+  --bs-spotify-gray: #242424;
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -3142,6 +3143,23 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: #212529;
 }
 
+.btn-spotify-gray {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #242424;
+  --bs-btn-border-color: #242424;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #1f1f1f;
+  --bs-btn-hover-border-color: #1d1d1d;
+  --bs-btn-focus-shadow-rgb: 69, 69, 69;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #1d1d1d;
+  --bs-btn-active-border-color: #1b1b1b;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #242424;
+  --bs-btn-disabled-border-color: #242424;
+}
+
 .btn-outline-primary {
   --bs-btn-color: #0d6efd;
   --bs-btn-border-color: #0d6efd;
@@ -3275,6 +3293,23 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: #212529;
   --bs-btn-disabled-bg: transparent;
   --bs-btn-disabled-border-color: #212529;
+  --bs-gradient: none;
+}
+
+.btn-outline-spotify-gray {
+  --bs-btn-color: #242424;
+  --bs-btn-border-color: #242424;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #242424;
+  --bs-btn-hover-border-color: #242424;
+  --bs-btn-focus-shadow-rgb: 36, 36, 36;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #242424;
+  --bs-btn-active-border-color: #242424;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #242424;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #242424;
   --bs-gradient: none;
 }
 
@@ -4905,6 +4940,13 @@ textarea.form-control-lg {
   --bs-alert-link-color: var(--bs-dark-text-emphasis);
 }
 
+.alert-spotify-gray {
+  --bs-alert-color: var(--bs-spotify-gray-text-emphasis);
+  --bs-alert-bg: var(--bs-spotify-gray-bg-subtle);
+  --bs-alert-border-color: var(--bs-spotify-gray-border-subtle);
+  --bs-alert-link-color: var(--bs-spotify-gray-text-emphasis);
+}
+
 @keyframes progress-bar-stripes {
   0% {
     background-position-x: 1rem;
@@ -5308,6 +5350,19 @@ textarea.form-control-lg {
   --bs-list-group-active-color: var(--bs-dark-bg-subtle);
   --bs-list-group-active-bg: var(--bs-dark-text-emphasis);
   --bs-list-group-active-border-color: var(--bs-dark-text-emphasis);
+}
+
+.list-group-item-spotify-gray {
+  --bs-list-group-color: var(--bs-spotify-gray-text-emphasis);
+  --bs-list-group-bg: var(--bs-spotify-gray-bg-subtle);
+  --bs-list-group-border-color: var(--bs-spotify-gray-border-subtle);
+  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+  --bs-list-group-action-hover-bg: var(--bs-spotify-gray-border-subtle);
+  --bs-list-group-action-active-color: var(--bs-emphasis-color);
+  --bs-list-group-action-active-bg: var(--bs-spotify-gray-border-subtle);
+  --bs-list-group-active-color: var(--bs-spotify-gray-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-spotify-gray-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-spotify-gray-text-emphasis);
 }
 
 .btn-close {
@@ -6846,6 +6901,11 @@ textarea.form-control-lg {
   background-color: RGBA(var(--bs-dark-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
+.text-bg-spotify-gray {
+  color: #fff !important;
+  background-color: RGBA(var(--bs-spotify-gray-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
 .link-primary {
   color: RGBA(var(--bs-primary-rgb), var(--bs-link-opacity, 1)) !important;
   text-decoration-color: RGBA(var(--bs-primary-rgb), var(--bs-link-underline-opacity, 1)) !important;
@@ -6916,6 +6976,15 @@ textarea.form-control-lg {
 .link-dark:hover, .link-dark:focus {
   color: RGBA(26, 30, 33, var(--bs-link-opacity, 1)) !important;
   text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1)) !important;
+}
+
+.link-spotify-gray {
+  color: RGBA(var(--bs-spotify-gray-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-spotify-gray-rgb), var(--bs-link-underline-opacity, 1)) !important;
+}
+.link-spotify-gray:hover, .link-spotify-gray:focus {
+  color: RGBA(29, 29, 29, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(29, 29, 29, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-body-emphasis {
@@ -12094,4 +12163,23 @@ main {
 .song:hover {
   background-color: #2a2929;
   border-radius: 5px;
+}
+
+.custom-fixed {
+  top: 150px;
+  right: 10px;
+}
+
+.bg-spotify-gray {
+  background-color: #2c2c2c;
+}
+
+body {
+  font-family: "Circular";
+}
+
+.zoom:hover {
+  transform: scale(1.1);
+  z-index: 100;
+  box-shadow: 0px 0px 5px 8px rgba(0, 0, 0, 0.461);
 }/*# sourceMappingURL=style.css.map */

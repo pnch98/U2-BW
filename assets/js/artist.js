@@ -28,7 +28,7 @@ function search(value) {
       document.getElementById("currentArtist").innerHTML = `
         <p class="mb-0"><i class="bi bi-patch-check-fill text-primary"></i> Artista verificato</p>
         <h1 class="display-2 fw-bold mb-3">${artist.name}</h1>
-        <p>8 miliardi di follower</p>
+        <p>${artist.nb_fan} ascoltatori mensili</p>
         `;
 
       searchSongs(myValue);
