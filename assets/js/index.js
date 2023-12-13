@@ -13,7 +13,6 @@ if (oraCorrente >= 5 && oraCorrente < 12) {
 document.getElementById("buonasera").querySelector("h3").innerHTML = saluto;
 
 const url = "https://deezerdevs-deezer.p.rapidapi.com/search?q=";
-const myValue = "eminem";
 const options = {
   method: "GET",
   headers: {
@@ -22,32 +21,53 @@ const options = {
   },
 };
 
-function search(value) {
-  fetch(url + value, options)
+window.addEventListener("DOMContentLoaded", () => {
+  const albumId = getRandomAlbum();
+  sectionPlaylist();
+
+  fetch("https://deezerdevs-deezer.p.rapidapi.com/album/" + albumId, options)
     .then((resp) => {
       if (resp.ok) {
         return resp.json();
       }
     })
-    .then((obj) => {
-      for (let i = 0; i < 6; i++) {
+    .then((album) => {
+      showAdd(album);
+    });
+});
+
+function sectionPlaylist() {
+  for (let i = 0; i < 6; i++) {
+    const randomAlbumId = getRandomAlbum();
+    console.log(randomAlbumId);
+
+    fetch("https://deezerdevs-deezer.p.rapidapi.com/album/" + randomAlbumId, options)
+      .then((resp) => {
+        if (resp.ok) {
+          return resp.json();
+        }
+      })
+      .then((album) => {
         const col = document.createElement("col");
         const outDiv = document.createElement("div");
         outDiv.className = "d-flex rounded bg-dark align-items-center";
         outDiv.style.cursor = "pointer";
+        outDiv.addEventListener("click", () => {
+          openAlbumPage(album.id);
+        });
 
         const inDiv1 = document.createElement("div");
-        inDiv1.className = "me-2 ";
+        inDiv1.className = "flex-shrink-0 me-2";
         const img = document.createElement("img");
         img.className = "w-100 rounded-start";
-        img.src = obj.data[i].album["cover_small"];
+        img.src = album.cover_small;
 
         const inDiv2 = document.createElement("div");
-        inDiv2.className = "d-flex fs-6 m-0";
+        inDiv2.className = "d-flex overflow-hidden fs-6 m-0";
 
         const title = document.createElement("p");
-        title.className = "mb-0";
-        title.innerText = obj.data[i].title;
+        title.className = "text-nowrap mb-0";
+        title.innerText = album.title;
 
         inDiv2.appendChild(title);
         inDiv1.appendChild(img);
@@ -57,8 +77,37 @@ function search(value) {
 
         const row = document.getElementById("smCards");
         row.appendChild(col);
-      }
-      console.log(obj.data);
-    });
+      });
+  }
 }
-search(myValue);
+
+function getRandomAlbum() {
+  const keys = Object.keys(idObj);
+  const randIndex = Math.floor(Math.random() * keys.length);
+  const values = [...idObj[`${keys[randIndex]}`]];
+
+  console.log("chiave: ", keys[randIndex]);
+  console.log("valore: ", values);
+
+  const randIndexValue = Math.floor(Math.random() * values.length);
+  return values[randIndexValue];
+}
+
+function showAdd(album) {
+  const songs = album.tracks.data;
+  const randIndexSongs = Math.floor(Math.random() * songs.length);
+
+  const selectedSong = songs[randIndexSongs];
+
+  const img = document.getElementById("adImg");
+  img.src = selectedSong.album.cover_medium;
+
+  const title = document.getElementById("album").querySelector("h1");
+  title.innerHTML = selectedSong.title;
+  const authors = document.getElementById("authors");
+  authors.innerHTML = selectedSong.artist.name;
+}
+
+function openAlbumPage(id) {
+  window.location.assign("./album.html?albumId=" + id);
+}
