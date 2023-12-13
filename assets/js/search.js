@@ -1,5 +1,3 @@
-import { token } from "./token.js";
-
 const playlists = document.getElementById("playlists");
 const resultPage = document.getElementById("results");
 
@@ -38,7 +36,6 @@ window.onload = function () {
 
 function handleSubmit() {
   const searchValue = document.getElementById("searchValue").value;
-  console.log(searchValue);
   showResults(searchValue);
 }
 
@@ -55,8 +52,6 @@ function showResults(searchValue) {
       showArtist(results.data[0]);
 
       showSongs(results.data);
-
-      console.log(results);
     });
 }
 

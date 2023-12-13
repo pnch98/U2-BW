@@ -1,5 +1,3 @@
-import { token } from "./token.js";
-
 let saluto;
 const oraCorrente = new Date().getHours();
 

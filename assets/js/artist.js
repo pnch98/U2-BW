@@ -1,5 +1,3 @@
-import { token } from "./token.js";
-
 const url = "https://deezerdevs-deezer.p.rapidapi.com/artist/";
 const myValue = "13";
 const options = {
