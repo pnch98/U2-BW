@@ -58,7 +58,7 @@ function searchSongs(id) {
         inDiv1.className = "col-1 d-flex justify-content-center align-items-center text-white-50";
         inDiv1.innerHTML = i + 1;
         const inDiv2 = document.createElement("div");
-        inDiv2.className = "col-5";
+        inDiv2.className = "col";
         /* -------- */
         const divImg = document.createElement("div");
         divImg.className = "d-flex";
@@ -85,7 +85,7 @@ function searchSongs(id) {
         /* -------- */
 
         const inDiv3 = document.createElement("div");
-        inDiv3.className = "col-4 d-flex justify-content-center align-items-center text-white-50";
+        inDiv3.className = "col-2 d-flex justify-content-center align-items-center text-white-50";
         const p = document.createElement("p");
         p.className = "mb-0";
         const views = Math.round(Math.random() * 700000) + 3000000;
