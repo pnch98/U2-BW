@@ -18,7 +18,7 @@
   background-image: linear-gradient(#212121, #121212);
 }
 main {
-  height: calc(100vh - 92px);
+  height: calc(100vh - 80px);
   overflow-y: auto;
 }
 /* width */
@@ -110,4 +110,33 @@ body {
 
 .line-height-1 {
   line-height: 3.75rem;
+}
+
+.slider {
+  accent-color: white;
+}
+
+.slider:hover {
+  accent-color: #1ed760;
+}
+
+.audio-container {
+  text-align: center;
+}
+
+.progress-container {
+  position: relative;
+  width: 300px;
+  height: 6px;
+  padding-bottom: 10px;
+  background-color: #2c2c2c;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  position: absolute;
+  height: 100%;
+  background-color: white;
+  border-radius: 5px;
+  width: 0;
 }
