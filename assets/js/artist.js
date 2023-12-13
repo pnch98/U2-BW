@@ -64,13 +64,13 @@ function searchSongs(id) {
         divImg.className = "d-flex";
 
         const inDivImg1 = document.createElement("div");
-        inDivImg1.className = "me-2 ";
+        inDivImg1.className = "me-2 flex-shrink-0";
         const img = document.createElement("img");
         img.className = "w-100";
         img.src = songs.data[i].album["cover_small"];
 
         const inDivImg2 = document.createElement("div");
-        inDivImg2.className = "d-flex fs-6 m-0";
+        inDivImg2.className = "d-flex fs-6 m-0 flex-grow-1";
 
         const title = document.createElement("p");
         title.className = "mb-0";
