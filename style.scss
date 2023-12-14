@@ -163,3 +163,25 @@ body {
     transform: translate3d(-75%, 0, 0);
   }
 }
+
+@media screen and (max-width: 795px) {
+  #footer3 {
+    button {
+      display: none;
+    }
+  }
+  #footer2 {
+    button {
+      display: none;
+    }
+    #playPauseBtn {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #aside {
+    display: none;
+  }
+}

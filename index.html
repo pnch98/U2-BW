@@ -12,12 +12,12 @@
     <div class="container-fluid p-0">
       <div class="d-flex">
         <!--Navbar-->
-        <div class="bg-black flex-shrink-0" style="width: 18%">
+        <div id="navbarContainer" class="bg-black flex-shrink-0" style="width: 18%">
           <nav class="navbar navbar-expand-lg">
             <div
               class="container-fluid flex-column align-items-start border border-1 border-dark border-top-0 border-end-0 border-start-0 px-2 pb-3"
             >
-              <button
+              <!-- <button
                 class="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
@@ -26,9 +26,9 @@
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span> -->
               </button>
-              <div class="collapse navbar-collapse flex-column align-items-start" id="navbarNav">
+              <div class="navbar-collapse flex-column align-items-start" id="navbarNav">
                 <ul class="navbar-nav flex-column mb-3">
                   <li class="nav-item dropdown">
                     <a
@@ -137,7 +137,7 @@
                 <p class="fs-8 mb-1">Ascolta</p>
 
                 <div id="albumBtn" class="d-flex">
-                  <button class="btn spotify-green-bg rounded-pill px-3 me-2 fs-7">Play</button>
+                  <button id="btnPlayAds" class="btn spotify-green-bg rounded-pill px-3 me-2 fs-7">Play</button>
                   <button class="btn btn-save border border-1 rounded-pill px-3 fs-7">Salva</button>
                   <button class="btn text-white fs-6 d-flex align-items-center">
                     <i class="bi bi-three-dots"></i>
@@ -295,7 +295,7 @@
       <!--Footer-->
       <footer class="container-fluid spotify-bg text-white px-3 mb-0">
         <div class="row row-cols-3">
-          <div class="col d-flex align-items-center">
+          <div id="footer1" class="col d-flex align-items-center">
             <div id="footerImg" class="p-2 me-3" style="width: 80px">
               <img src="./assets/imgs/main/image-14.jpg" alt="img14" class="w-100" />
             </div>
@@ -306,7 +306,7 @@
             <div><i class="bi bi-heart me-1"></i></div>
           </div>
 
-          <div class="col d-flex flex-column align-items-center text-center">
+          <div id="footer2" class="col d-flex flex-column align-items-center text-center">
             <div>
               <button class="btn text-white-50 border border-0 py-0"><i class="bi bi-shuffle"></i></button>
               <button class="btn text-white-50 border border-0 py-0"><i class="bi bi-skip-start-fill"></i></button>
@@ -326,7 +326,7 @@
             </div>
           </div>
 
-          <div class="col d-flex justify-content-end align-items-center">
+          <div id="footer3" class="col d-flex justify-content-end align-items-center">
             <button class="btn text-white-50 border border-0 p-0 me-2"><i class="bi bi-mic"></i></button>
             <button class="btn text-white-50 border border-0 p-0 me-2"><i class="bi bi-view-list"></i></button>
             <button class="btn text-white-50 border border-0 p-0 me-1"><i class="bi bi-pc-display"></i></button>
