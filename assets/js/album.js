@@ -1,8 +1,6 @@
 const albumId = new URLSearchParams(window.location.search).get("albumId");
-const url =
-  albumId == "liked"
-    ? "https://deezerdevs-deezer.p.rapidapi.com/track/"
-    : "https://deezerdevs-deezer.p.rapidapi.com/album/";
+
+const url = "https://deezerdevs-deezer.p.rapidapi.com/album/";
 const options = {
   method: "GET",
   headers: {
@@ -13,6 +11,8 @@ const options = {
 
 window.addEventListener("DOMContentLoaded", () => {
   if (albumId == "liked") {
+    showCover(likedSongs);
+    showResults(likedSongs);
   } else {
     fetch(url + albumId, options)
       .then((resp) => {
@@ -56,29 +56,78 @@ function showResults(album) {
 
     const td4 = document.createElement("td");
     td4.style = "width: 60px";
-    td4.innerHTML = '<i class="bi bi-heart d-none"></i>';
 
-    if (likedSongs.includes(song.id)) {
-      td4.innerHTML = '<i class="bi bi-heart-fill d-none"></i>';
+    if (albumId !== "liked") {
+      // se non siamo nella playlist brani che ti piacciono, creo td4 col cuore bianco e faccio tutte le funzioni
+      td4.innerHTML = '<i class="bi bi-heart d-none"></i>';
+      // al caricamento della pagina controlla se una o più canzoni dell'album sono incluse in localstorage. In caso, mette cuore pieno
+      likedSongs.forEach((track) => {
+        if (track.id == song.id) {
+          td4.innerHTML = '<i class="bi bi-heart-fill d-none"></i>';
+        }
+      });
+
+      td4.addEventListener("click", () => {
+        // creo l'oggetto da salvare in localstorage
+        const trackObj = {
+          id: song.id,
+          title: song.title,
+          artist: {
+            name: song.artist.name,
+          },
+          album: {
+            cover_medium: song.album.cover_medium,
+          },
+          duration: song.duration,
+          preview: song.preview,
+        };
+
+        if (td4.innerHTML == '<i class="bi bi-heart"></i>') {
+          td4.innerHTML = '<i class="bi bi-heart-fill"></i>';
+
+          likedSongs.push(trackObj);
+          localStorage.setItem("likedSongs", JSON.stringify(likedSongs));
+          console.log(likedSongs);
+        } else {
+          td4.innerHTML = '<i class="bi bi-heart"></i>';
+          likedSongs.forEach((track) => {
+            if (track.id == song.id) {
+              const indexSong = likedSongs.indexOf(track);
+              console.log("index: " + indexSong + " " + track);
+              likedSongs.splice(indexSong, 1);
+              localStorage.setItem("likedSongs", JSON.stringify(likedSongs));
+            }
+          });
+        }
+      });
+      tr.addEventListener("mouseover", () => {
+        tr.style = "cursor: pointer";
+        td4.firstChild.classList.remove("d-none");
+        td6.firstChild.classList.remove("d-none");
+      });
+
+      tr.addEventListener("mouseout", () => {
+        td4.firstChild.classList.add("d-none");
+        td6.firstChild.classList.add("d-none");
+      });
+    } else {
+      tr.style = "cursor: pointer";
+      td4.innerHTML = '<i class="bi bi-heart-fill text-spotify-green"></i>';
+      td4.addEventListener("click", () => {
+        if (td4.innerHTML == '<i class="bi bi-heart-fill text-spotify-green"></i>') {
+          console.log("nice");
+          td4.innerHTML == '<i class="bi bi-heart-fill d-none"></i>';
+          likedSongs.forEach((track) => {
+            if (track.id == song.id) {
+              const indexSong = likedSongs.indexOf(track);
+              likedSongs.splice(indexSong, 1);
+              localStorage.setItem("likedSongs", JSON.stringify(likedSongs));
+            }
+          });
+          window.location.reload();
+        }
+      });
     }
-
-    td4.addEventListener("click", () => {
-      if (td4.innerHTML == '<i class="bi bi-heart"></i>') {
-        td4.innerHTML = '<i class="bi bi-heart-fill"></i>';
-        likedSongs.push(song.id);
-        localStorage.setItem("likedSongs", likedSongs);
-        console.log(likedSongs);
-        console.log(localStorage.getItem("likedSongs"));
-      } else {
-        td4.innerHTML = '<i class="bi bi-heart"></i>';
-        const indexSong = likedSongs.indexOf(song.id);
-        likedSongs.splice(indexSong, 1);
-        localStorage.setItem("likedSongs", likedSongs);
-        console.log(likedSongs);
-        console.log(localStorage.getItem("likedSongs"));
-      }
-    });
-
     const td5 = document.createElement("td");
     const duration = document.createElement("p");
     duration.className = "mb-0 ms-auto";
@@ -114,39 +163,53 @@ function showResults(album) {
       audio.play();
       playPauseBtn.innerHTML = '<i class="bi bi-pause-circle-fill"></i>';
     });
-
-    tr.addEventListener("mouseover", () => {
-      tr.style = "cursor: pointer";
-      td4.firstChild.classList.remove("d-none");
-      td6.firstChild.classList.remove("d-none");
-    });
-
-    tr.addEventListener("mouseout", () => {
-      td4.firstChild.classList.add("d-none");
-      td6.firstChild.classList.add("d-none");
-    });
     i += 1;
+  });
+
+  const btnPlayFirst = document.getElementById("btnPlay");
+  btnPlayFirst.addEventListener("click", function () {
+    const footerImg = document.getElementById("footerImg").querySelector("img");
+    footerImg.src = album[0].album.cover_medium;
+    const footerSong = document.getElementById("footerSong").querySelectorAll("p");
+    footerSong[0].innerHTML = album[0].title;
+    footerSong[1].innerHTML = album[0].artist.name;
+    const audioContainer = document.getElementById("audioPlayer");
+    audioContainer.src = album[0].preview;
+    const progressBar = document.getElementById("progressBar");
+    progressBar.style.width = 0;
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    const audio = document.getElementById("audioPlayer");
+    audio.play();
+    playPauseBtn.innerHTML = '<i class="bi bi-pause-circle-fill"></i>';
   });
 }
 
 function showCover(album) {
-  const coverBg = document.getElementById("currentAlbum");
-  coverBg.style = `background-image: url()`;
-
   const img = document.getElementById("currentAlbum").querySelector("img");
-  img.src = album.cover_medium;
-
   const title = document.getElementById("info").querySelector("h1");
-  title.innerHTML = album.title;
-
-  const photoArt = document.getElementById("photoArt").querySelector("img");
-  photoArt.src = album.artist.picture_small;
-
   const description = document.getElementById("photoArt").querySelector("p");
   const resto = album.duration % 60 < 10 ? "0" + (album.duration % 60) : album.duration % 60;
-  description.innerHTML = `
-  ${album.artist.name} • 
-  ${album.release_date.split("-")[0]} • 
-  ${album.nb_tracks} brani, 
-  ${parseInt(album.duration / 60)} min ${resto} sec.`;
+  const photoArt = document.getElementById("photoArt").querySelector("img");
+
+  if (albumId == "liked") {
+    img.src = "./assets/imgs/liked-songs.png";
+    title.innerText = "Brani che ti piacciono!";
+    photoArt.style = "display: none";
+    photoArt.closest("div").style = "display: none";
+
+    description.innerHTML = `
+    Dai tuoi artisti preferiti! • 
+    ${album.length} brani`;
+  } else {
+    img.src = album.cover_medium;
+    title.innerHTML = album.title;
+
+    photoArt.src = album.artist.picture_small;
+
+    description.innerHTML = `
+    ${album.artist.name} • 
+    ${album.release_date.split("-")[0]} • 
+    ${album.nb_tracks} brani, 
+    ${parseInt(album.duration / 60)} min ${resto} sec.`;
+  }
 }
