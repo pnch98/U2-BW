@@ -12,7 +12,7 @@
     <div class="container-fluid p-0">
       <div class="d-flex">
         <!--Navbar-->
-        <div id="navbarContainer" class="bg-black flex-shrink-0" style="width: 18%">
+        <div id="navbarContainer" class="bg-black flex-shrink-0">
           <nav class="navbar navbar-expand-lg">
             <div
               class="container-fluid flex-column align-items-start border border-1 border-dark border-top-0 border-end-0 border-start-0 px-2 pb-3"
@@ -48,17 +48,17 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-white-50 fw-semibold active" aria-current="page" href="index.html"
-                      ><i class="bi bi-house-door-fill me-1"></i> Home</a
+                      ><i class="bi bi-house-door-fill me-1"></i> <span>Home</span></a
                     >
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-white-50 fw-semibold" href="search.html"
-                      ><i class="bi bi-search me-1"></i> Cerca</a
+                      ><i class="bi bi-search me-1"></i> <span>Cerca</span></a
                     >
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-white-50 fw-semibold" href="#"
-                      ><i class="bi bi-collection me-1"></i> La tua libreria</a
+                      ><i class="bi bi-collection me-1"></i> <span>La tua libreria</span></a
                     >
                   </li>
                 </ul>
@@ -66,17 +66,17 @@
                 <ul class="navbar-nav flex-column">
                   <li class="nav-item">
                     <a class="nav-link text-white-50 fw-semibold" aria-current="page" href="#">
-                      <i class="bi bi-plus-square-fill me-1"></i> Crea playlist</a
+                      <i class="bi bi-plus-square-fill me-1"></i> <span>Crea playlist</span></a
                     >
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-white-50 fw-semibold" href="album.html?albumId=liked"
-                      ><i class="bi bi-heart-fill me-1"></i> Brani che ti piacciono</a
+                      ><i class="bi bi-heart-fill me-1"></i><span>Brani che ti piacciono</span> </a
                     >
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-white-50 fw-semibold" href="#"
-                      ><i class="bi bi-bookmark-fill me-1"></i> I tuoi episodi</a
+                      ><i class="bi bi-bookmark-fill me-1"></i> <span>I tuoi episodi</span></a
                     >
                   </li>
                 </ul>
@@ -337,6 +337,51 @@
         </div>
       </footer>
       <!--Link js-->
+      <!--navbottom MOBILE-->
+      <div id="navbarMobile" class="bg-black d-none">
+        <nav class="navbar navbar-expand-lg ">
+          <div
+            class="container-fluid align-items-start border border-1 border-dark border-top-0 border-end-0 border-start-0 px-2 pb-3 "
+          >
+            </button>
+            <div class="navbar-collapse d-flex justify-content-center" id="navbarNav">
+              <ul class="navbar-nav mb-3">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link fs-5 text-white-50 pt-3 pb-0"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-three-dots"></i>
+                  </a>
+                  <ul class="dropdown-menu bg-secondary">
+                    <li><a class="dropdown-item" href="#">File</a></li>
+                    <li><a class="dropdown-item" href="#">Robe</a></li>
+                    <li><a class="dropdown-item" href="#">Pippo</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white-50 fw-semibold active" aria-current="page" href="index.html"
+                    ><i class="bi bi-house-door-fill me-1"></i> <span>Home</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white-50 fw-semibold" href="search.html"
+                    ><i class="bi bi-search me-1"></i> <span>Cerca</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white-50 fw-semibold" href="#"
+                    ><i class="bi bi-collection me-1"></i> <span>La tua libreria</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
     </div>
 
     <script

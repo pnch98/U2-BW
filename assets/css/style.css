@@ -12229,6 +12229,10 @@ body {
   display: inline-block;
 }
 
+#navbarContainer {
+  width: 18%;
+}
+
 @keyframes stage_animation {
   0% {
     transform: translate3d(0, 0, 0);
@@ -12250,9 +12254,43 @@ body {
   #footer2 #playPauseBtn {
     display: block;
   }
+  span {
+    display: none;
+  }
+  #navbarContainer {
+    width: 6%;
+  }
 }
 @media screen and (max-width: 992px) {
   #aside {
     display: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  #albumHide h1, #albumHide .h1 {
+    overflow-x: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 300px;
+  }
+  h1, .h1 {
+    animation: stage_animation 20s linear infinite;
+    display: inline-block;
+  }
+  @keyframes stage_animation {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    20% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-75%, 0, 0);
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  #navbarMobile {
+    display: block !important;
   }
 }/*# sourceMappingURL=style.css.map */
