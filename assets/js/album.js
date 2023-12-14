@@ -18,9 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
     .then((obj) => {
       showCover(obj);
       showResults(obj.tracks.data);
-      console.log(obj);
     });
-  console.log(id);
 });
 
 const songDiv = document.getElementById("song");

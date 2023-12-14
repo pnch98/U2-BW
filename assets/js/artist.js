@@ -12,7 +12,6 @@ const options = {
 
 window.addEventListener("DOMContentLoaded", () => {
   search(artistId);
-  console.log(id);
 });
 
 function search(value) {
