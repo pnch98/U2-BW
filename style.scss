@@ -260,3 +260,13 @@ body {
 .custom-card-bg:hover {
   background-color: #32383daf;
 }
+
+#playlists > p {
+  overflow-x: hidden;
+  margin-bottom: 0.5rem;
+  text-wrap: nowrap;
+  &:hover {
+    cursor: pointer;
+    color: white;
+  }
+}

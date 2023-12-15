@@ -39,7 +39,6 @@ window.addEventListener("DOMContentLoaded", () => {
 function sectionPlaylist() {
   for (let i = 0; i < 6; i++) {
     const randomAlbumId = getRandomAlbum();
-    console.log(randomAlbumId);
 
     fetch("https://deezerdevs-deezer.p.rapidapi.com/album/" + randomAlbumId, options)
       .then((resp) => {
@@ -85,9 +84,6 @@ function getRandomAlbum() {
   const keys = Object.keys(idObj);
   const randIndex = Math.floor(Math.random() * keys.length);
   const values = [...idObj[`${keys[randIndex]}`]];
-
-  console.log("chiave: ", keys[randIndex]);
-  console.log("valore: ", values);
 
   const randIndexValue = Math.floor(Math.random() * values.length);
   return values[randIndexValue];

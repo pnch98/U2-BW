@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="./assets/dist/css/style.min.css" />
     <link rel="stylesheet" href="./assets/css/circular-font.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
-    <title>Spotify - Home</title>
+    <title>Crea Playlist</title>
   </head>
   <body>
     <div class="container-fluid p-0">
       <div class="d-flex">
         <!--Navbar-->
-        <div class="bg-black flex-shrink-0" id="navbarContainer">
-          <nav class="navbar navbar-expand-lg">
+        <div class=" bg-black flex-shrink-0" id="navbarContainer">
+          <nav class="navbar navbar-expand-lg mb-3">
             <div
               class="container-fluid flex-column align-items-start border border-1 border-dark border-top-0 border-end-0 border-start-0 px-2 pb-3"
             >
@@ -48,207 +48,52 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-white-50 fw-semibold active" aria-current="page" href="index.html"
-                      ><i class="bi fs-5 bi-house-door-fill me-1"></i><span>Home</span></a
+                      ><i class="bi bi-house-door-fill me-1"></i><span>Home</span></a
                     >
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-white-50 fw-semibold" href="search.html"
-                      ><i class="bi fs-5 bi-search me-1"></i><span>Cerca</span></a
+                      ><i class="bi bi-search me-1"></i><span>Cerca</span></a
                     >
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-white-50 fw-semibold" href="#"
-                      ><i class="bi fs-5 bi-collection me-1"></i><span>La tua libreria</span></a
+                      ><i class="bi bi-collection me-1"></i><span>La tua libreria</span></a
                     >
                   </li>
                 </ul>
 
                 <ul class="navbar-nav flex-column">
                   <li class="nav-item">
-                    <a id="createPlaylist" class="nav-link text-white-50 fw-semibold" aria-current="page" href="#">
-                    <i class="bi fs-5 bi-plus-square-fill me-1"></i><span>Crea playlist</span></a
+                    <a class="nav-link text-white-50 fw-semibold" aria-current="page" href="#">
+                    <i class="bi bi-plus-square-fill me-1"></i><span>Crea playlist</span></a
                     >
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-white-50 fw-semibold" href="album.html?albumId=liked"
-                      ><i class="bi fs-5 bi-heart-fill me-1"></i><span>Brani che ti piacciono</span>
+                      ><i class="bi bi-heart-fill me-1"></i><span>Brani che ti piacciono</span>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-white-50 fw-semibold" href="#"
-                      ><i class="bi fs-5 bi-bookmark-fill me-1"></i><span>I tuoi episodi</span></a
+                      ><i class="bi bi-bookmark-fill me-1"></i><span>I tuoi episodi</span></a
                     >
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
-          <div id="playlists" class="container-fluid overflow-x-hidden text-white-50 py-2">
-            <form id="playlistForm">
-              <input id="inputForm" type="text" class="d-none border-0 rounded-pill bg-spotify-gray text-white w-100 px-2 py-1 mb-2 ">
-            </form>
-            <p>Playlist1</p>
+          <div id="playlists" class="container-fluid overflow-x-hidden text-white-50">
+            <p>Buonasera</p>
             <p>Salve salvino vicino</p>
-            <p>Pipplaylist</p>
-            <p>Playlist incredibile per persone incredibili</p>
+            <p>ojaspdojasoihdoiasuhdoasijhdopiashdushaiudhosaijdòlksaj</p>
           </div>
         </div>
         <!--Main-->
         <main class="flex-grow-1 spotify-bg text-white overflow-y-scroll px-4 py-2">
-          <div id="btn_acc" class="d-flex justify-content-between mt-3 mb-3">
-            <div id="btns" class="d-flex">
-              <button onclick="history.back()" class="btn btn-black opacity-75 rounded-circle text-white me-2 px-2 py-0">
-                <i class="bi bi-chevron-compact-left"></i>
-              </button>
-              <button onclick="history.forward()" class="btn btn-black opacity-75 rounded-circle text-white px-2 py-0">
-                <i class="bi bi-chevron-compact-right"></i>
-              </button>
-            </div>
-            <div id="acc">
-              <div class="dropdown">
-                <button
-                  class="btn btn-dark dropdown-toggle rounded-pill"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <i class="bi bi-person-circle"></i> Pippo 8
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Pippo</a></li>
-                  <li><a class="dropdown-item" href="#">Goofy</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!------>
-          <button id="showBtn" class="btn btn-black rounded-end-0 position-fixed custom-fixed d-none">
-            <i class="bi bi-chevron-compact-left text-white-50"></i>
-          </button>
-          <div id="ads" class="p-3 d-flex bg-banner rounded-1 mb-3">
-            <div style="height: 200px; width: auto" class="me-3">
-              <img id="adImg" src="" class="flex-shrink-0 h-100" alt="coverAlbum" />
-            </div>
-            <div id="album" class="d-flex flex-column justify-content-between overflow-hidden flex-grow-1">
-              <div>
-                <div id="albumHide" class="d-flex justify-content-between align-items-center">
-                  <p class="text-uppercase fs-8 mb-0">Album</p>
-                  <button class="btn btn-dark rounded-pill py-0 text-uppercase text-white-50 fs-9">
-                    nascondi annunci
-                  </button>
-                </div>
+            <div class="container">
 
-                <h1 class="display-3 text-nowrap fw-bold mb-0"></h1>
-                <p id="authors" class="fs-8"></p>
-              </div>
-              <div>
-                <p class="fs-8 mb-1">Ascolta</p>
-
-                <div id="albumBtn" class="d-flex">
-                  <button id="btnPlayAds" class="btn spotify-green-bg rounded-pill px-3 me-2 fs-7">Play</button>
-                  <button class="btn btn-save border border-1 rounded-pill px-3 fs-7">Salva</button>
-                  <button class="btn text-white fs-6 d-flex align-items-center">
-                    <i class="bi bi-three-dots"></i>
-                  </button>
-                </div>
-              </div>
             </div>
-          </div>
-          <!----->
-          <div id="buonasera" class="mb-5">
-            <h3>Buonasera</h3>
-            <div id="smCards" class="row row-cols-2 row-cols-md-3 gy-3 gx-3"></div>
-          </div>
-          <!----->
-          <div id="other" class="mb-5">
-            <div class="d-flex justify-content-between align-items-center">
-              <h5>Altro di ciò che ti piace</h5>
-              <button class="btn btn-secondary rounded-pill py-0 text-uppercase fs-10">visualizza tutto</button>
-            </div>
-
-            <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-4 row-cols-md-5 gx-3">
-              <div class="col cardLike0">
-                <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-1.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
-                  <h6 class="fs-10">Hot Hits Italia</h6>
-                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
-                </div>
-              </div>
-              <div class="col cardLike1">
-                <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-2.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
-                  <h6 class="fs-10">Hot Hits Italia</h6>
-                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
-                </div>
-              </div>
-              <div class="col cardLike2">
-                <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-3.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
-                  <h6 class="fs-10">Hot Hits Italia</h6>
-                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
-                </div>
-              </div>
-              <div class="col cardLike3">
-                <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-4.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
-                  <h6 class="fs-10">Hot Hits Italia</h6>
-                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
-                </div>
-              </div>
-              <div class="col cardLike4">
-                <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-5.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
-                  <h6 class="fs-10">Hot Hits Italia</h6>
-                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="other2">
-            <div class="d-flex justify-content-between align-items-center">
-              <h5>Altro di altro di ciò che ti piace ancora di più altro</h5>
-              <button class="btn btn-secondary rounded-pill py-0 text-uppercase fs-10">visualizza tutto</button>
-            </div>
-
-            <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-4 row-cols-md-5 gx-3">
-              <div class="col cardLike0">
-                <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-7.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
-                  <h6 class="fs-10">Hot Hits Italia</h6>
-                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
-                </div>
-              </div>
-              <div class="col cardLike1">
-                <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-8.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
-                  <h6 class="fs-10">Hot Hits Italia</h6>
-                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
-                </div>
-              </div>
-              <div class="col cardLike2">
-                <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-9.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
-                  <h6 class="fs-10">Hot Hits Italia</h6>
-                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
-                </div>
-              </div>
-              <div class="col cardLike3">
-                <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-10.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
-                  <h6 class="fs-10">Hot Hits Italia</h6>
-                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
-                </div>
-              </div>
-              <div class="col cardLike4">
-                <div class="p-2 bg-dark rounded-1">
-                  <img src="assets/imgs/main/image-11.jpg" alt="img16" class="w-100 rounded-1 mb-2" />
-                  <h6 class="fs-10">Hot Hits Italia</h6>
-                  <p class="fs-10 mb-0">La playlist più brutta del momento</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </main>
         <!--Aside-->
         <aside id="aside" class="flex-shrink-0 bg-black text-white-50 p-2" style="width: 15%">
@@ -387,7 +232,6 @@
             </div>
           </div>
         </nav>
-        
       </footer>
       <!--Link js-->
       </div>
@@ -403,7 +247,6 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/js/functionalities.js"></script>
     <script src="./assets/js/player.js"></script>
     <script src="./assets/js/idlist.js"></script>
     <script src="./assets/js/token.js"></script>

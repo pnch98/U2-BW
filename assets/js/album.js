@@ -150,7 +150,7 @@ function showResults(album) {
 
     td2.addEventListener("click", function () {
       const footerImg = document.getElementById("footerImg").querySelector("img");
-      footerImg.src = song.album["cover_small"];
+      footerImg.src = song.album.cover_medium;
       const footerSong = document.getElementById("footerSong").querySelectorAll("p");
       footerSong[0].innerHTML = song.title;
       footerSong[1].innerHTML = song.artist.name;
