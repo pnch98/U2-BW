@@ -152,6 +152,10 @@ body {
   display: inline-block;
 }
 
+#navbarContainer {
+  width: 18%;
+}
+
 @keyframes stage_animation {
   0% {
     transform: translate3d(0, 0, 0);
