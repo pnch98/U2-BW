@@ -12118,4 +12118,95 @@ body {
   100% {
     transform: translate3d(-75%, 0, 0);
   }
+<<<<<<< Updated upstream
+=======
+}
+@media screen and (max-width: 795px) {
+  #footer3 button {
+    display: none;
+  }
+  #footer2 button {
+    display: none;
+  }
+  #footer2 #playPauseBtn {
+    display: block;
+  }
+  span {
+    display: none;
+  }
+  #navbarContainer {
+    width: 6%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cardLike4 {
+    display: none;
+  }
+  #navbarContainer {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  #navbarMobile {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 745px) {
+  #footerImg {
+    display: none;
+  }
+  #footerSong {
+    width: 50%;
+  }
+  .progress-container {
+    width: 100vw;
+  }
+  #footerTwoBtn {
+    margin: 10px 0;
+  }
+  input[type=range] {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 992px) {
+  #aside {
+    display: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  #albumHide h1,
+  #albumHide .h1 {
+    overflow-x: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 300px;
+  }
+  h1,
+  .h1 {
+    animation: stage_animation 20s linear infinite;
+    display: inline-block;
+  }
+  @keyframes stage_animation {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    20% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-75%, 0, 0);
+    }
+  }
+  .cardLike2,
+  .cardLike3 {
+    display: none;
+  }
+}
+.custom-card-bg {
+  background-color: #141618;
+}
+
+.custom-card-bg:hover {
+  background-color: rgba(50, 56, 61, 0.6862745098);
+>>>>>>> Stashed changes
 }/*# sourceMappingURL=style.css.map */
