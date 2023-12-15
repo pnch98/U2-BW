@@ -200,6 +200,9 @@ function showCover(album) {
     description.innerHTML = `
     Dai tuoi artisti preferiti! • 
     ${album.length} brani`;
+
+    const divAlbum = document.getElementById("coverBackAlbum");
+    divAlbum.style = `background-color: rgba(117,96,234,254)`;
   } else {
     img.src = album.cover_medium;
     title.innerHTML = album.title;
@@ -211,5 +214,32 @@ function showCover(album) {
     ${album.release_date.split("-")[0]} • 
     ${album.nb_tracks} brani, 
     ${parseInt(album.duration / 60)} min ${resto} sec.`;
+
+    showColor(album.cover_medium);
+  }
+}
+
+function showColor(albumCover) {
+  const colorThief = new ColorThief();
+  const image = new Image();
+  let divAlbum = document.getElementById("coverBackAlbum");
+  let divSongs = document.getElementById("playAlbum");
+  image.src = albumCover;
+  image.crossOrigin = "Anonymous";
+  let color;
+
+  // Make sure image is finished loading
+  if (image.complete) {
+    color = colorThief.getColor(image);
+    divAlbum = document.getElementById("coverBackAlbum");
+    divAlbum.style = `background-color: rgba(${color.join(",")})`;
+    playAlbum.style = `background: linear-gradient(rgba(${color.join(",")},0.8) 0%, rgba(29,29,29,255) 40%)`;
+  } else {
+    image.addEventListener("load", function () {
+      color = colorThief.getColor(image);
+      divAlbum = document.getElementById("coverBackAlbum");
+      divAlbum.style = `background-color: rgba(${color.join(",")})`;
+      playAlbum.style = `background: linear-gradient(rgba(${color.join(",")}, 0.8) 0%, rgba(29,29,29,255) 40%)`;
+    });
   }
 }

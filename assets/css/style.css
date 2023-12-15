@@ -12175,9 +12175,19 @@ body {
     display: none;
   }
 }
+@media screen and (min-width: 583px) {
+  #currentAlbum {
+    display: flex;
+    flex-direction: row !important;
+    align-items: end;
+  }
+}
 @media screen and (min-width: 576px) {
   .threeDot {
     display: none !important;
+  }
+  .tabTitleMob {
+    display: none;
   }
 }
 @media screen and (max-width: 575px) {
@@ -12198,6 +12208,14 @@ body {
     display: none !important;
   }
   #trackLike {
+    display: none !important;
+  }
+  .tabTitle {
+    display: none;
+  }
+}
+@media screen and (max-width: 338px) {
+  #roundedImg {
     display: none !important;
   }
 }
