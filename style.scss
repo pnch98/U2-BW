@@ -185,7 +185,6 @@ body {
     width: 6%;
   }
 }
-
 @media screen and (max-width: 768px) {
   .cardLike4 {
     display: none;
@@ -199,7 +198,6 @@ body {
     display: none !important;
   }
 }
-
 @media screen and (max-width: 745px) {
   #footerImg {
     display: none;
@@ -217,10 +215,15 @@ body {
     width: 50%;
   }
 }
-
 @media screen and (max-width: 992px) {
   #aside {
     display: none;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .threeDot {
+    display: none !important;
   }
 }
 @media screen and (max-width: 575px) {
@@ -234,17 +237,25 @@ body {
   .cardLike3 {
     display: none;
   }
+  .eyeViews {
+    display: none !important;
+  }
+  .timeSong {
+    display: none !important;
+  }
+  #trackLike {
+    display: none !important;
+  }
 }
-
 .custom-card-bg {
   background-color: #141618;
 }
 
 .custom-card-bg:hover {
-  background-color: #32383daf;
+  background-color: rgba(50, 56, 61, 0.6862745098);
 }
 
-#playlists > p {
+#sidePlaylists > p {
   overflow-x: hidden;
   margin-bottom: 0.5rem;
   text-wrap: nowrap;

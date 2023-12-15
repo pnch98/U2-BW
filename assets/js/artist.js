@@ -121,10 +121,18 @@ function showFiveSongs(songs, limit) {
     duration.innerHTML = `${parseInt(songs.data[i].duration / 60)}:${resto}`;
     inDiv4.appendChild(duration);
 
+    const inDiv5 = document.createElement("div");
+    inDiv5.className = "threeDot col-1 d-flex justify-content-center align-items-center text-white-50";
+    const threeDot = document.createElement("i");
+
+    threeDot.innerHTML = '<i class="bi bi-three-dots-vertical"></i>';
+    inDiv5.appendChild(threeDot);
+
     row.appendChild(inDiv1);
     row.appendChild(inDiv2);
     row.appendChild(inDiv3);
     row.appendChild(inDiv4);
+    row.appendChild(inDiv5);
 
     lista.appendChild(row);
     row.addEventListener("click", function () {
