@@ -106,6 +106,22 @@ function showAdd(album) {
   title.innerHTML = selectedSong.title;
   const authors = document.getElementById("authors");
   authors.innerHTML = selectedSong.artist.name;
+
+  btnPlayAds.addEventListener("click", function () {
+    const footerImg = document.getElementById("footerImg").querySelector("img");
+    footerImg.src = selectedSong.album.cover_medium;
+    const footerSong = document.getElementById("footerSong").querySelectorAll("p");
+    footerSong[0].innerHTML = selectedSong.title;
+    footerSong[1].innerHTML = selectedSong.artist.name;
+    const audioContainer = document.getElementById("audioPlayer");
+    audioContainer.src = selectedSong.preview;
+    const progressBar = document.getElementById("progressBar");
+    progressBar.style.width = 0;
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    const audio = document.getElementById("audioPlayer");
+    audio.play();
+    playPauseBtn.innerHTML = '<i class="bi bi-pause-circle-fill"></i>';
+  });
 }
 
 function openAlbumPage(id) {
