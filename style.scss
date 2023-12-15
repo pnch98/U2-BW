@@ -224,28 +224,11 @@ body {
   }
 }
 @media screen and (max-width: 575px) {
-  #albumHide h1,
-  #albumHide .h1 {
-    overflow-x: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    max-width: 300px;
+  #ads {
+    display: none !important;
   }
-  h1,
-  .h1 {
-    animation: stage_animation 20s linear infinite;
-    display: inline-block;
-  }
-  @keyframes stage_animation {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-    20% {
-      transform: translate3d(0, 0, 0);
-    }
-    100% {
-      transform: translate3d(-75%, 0, 0);
-    }
+  #footer3 input {
+    display: none !important;
   }
   .cardLike2,
   .cardLike3 {

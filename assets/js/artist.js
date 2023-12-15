@@ -117,8 +117,7 @@ function showFiveSongs(songs, limit) {
     inDiv4.className = "col-2 d-flex justify-content-center align-items-center text-white-50";
     const duration = document.createElement("p");
     duration.className = "mb-0";
-    const resto =
-      songs.data[i].duration % 60 < 10 ? "0" + (songs.data[i].duration % 60) : songs.data[i].duration % 60;
+    const resto = songs.data[i].duration % 60 < 10 ? "0" + (songs.data[i].duration % 60) : songs.data[i].duration % 60;
     duration.innerHTML = `${parseInt(songs.data[i].duration / 60)}:${resto}`;
     inDiv4.appendChild(duration);
 
@@ -145,20 +144,20 @@ function showFiveSongs(songs, limit) {
     });
   }
 }
-let idAlbumArray = [];
+const idAlbumArray = [];
 /*funzioni cards discografia*/
 function showAlbums(songs) {
   console.log(songs);
   songs.forEach((song) => {
     if (!idAlbumArray.includes(song.album.id) && idAlbumArray.length < 5) {
       idAlbumArray.push(song.album.id);
-      let albumCard = document.createElement("div");
+      const albumCard = document.createElement("div");
       albumCard.className = "col";
       albumCard.innerHTML = `<div class="custom-card-bg p-2 rounded-1 text-nowrap overflow-hidden mb-3">
      <img src="${song.album.cover_medium}" alt="cover" class="w-100 rounded-1 mb-4" />
      <h6>${song.album.title}</h6>
    </div>`;
-      let albumRow = document.getElementById("discList");
+      const albumRow = document.getElementById("discList");
       albumRow.appendChild(albumCard);
       albumCard.addEventListener("click", function () {
         window.location.assign("./album.html?albumId=" + song.album.id);

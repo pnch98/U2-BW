@@ -29,7 +29,7 @@ for (let i = 0; i < 36; i++) {
 }
 
 window.onload = function () {
-  const form = document.querySelector("form");
+  const form = document.getElementById("searchForm");
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     handleSubmit();

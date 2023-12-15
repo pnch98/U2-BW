@@ -1,5 +1,5 @@
 const newPlaylist = document.getElementById("createPlaylist");
-const playlists = document.getElementById("playlists");
+const sidePlaylists = document.getElementById("sidePlaylists");
 const input = document.getElementById("inputForm");
 
 newPlaylist.addEventListener("click", () => {
@@ -11,7 +11,7 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const p = document.createElement("p");
   p.innerHTML = input.value;
-  playlists.appendChild(p);
+  sidePlaylists.appendChild(p);
   input.classList.add("d-none");
   input.value = "";
 });
