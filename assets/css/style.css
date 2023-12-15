@@ -12229,6 +12229,10 @@ body {
   display: inline-block;
 }
 
+#navbarContainer {
+  width: 18%;
+}
+
 @keyframes stage_animation {
   0% {
     transform: translate3d(0, 0, 0);
@@ -12293,6 +12297,12 @@ body {
   }
 }
 @media screen and (max-width: 575px) {
+  #ads {
+    display: none !important;
+  }
+  #footer3 input {
+    display: none !important;
+  }
   #albumHide h1,
   #albumHide .h1 {
     overflow-x: hidden;
