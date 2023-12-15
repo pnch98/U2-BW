@@ -260,6 +260,10 @@ body {
   .tabTitle {
     display: none;
   }
+  main {
+    height: 100%;
+    overflow-y: auto;
+  }
 }
 @media screen and (max-width: 338px) {
   #roundedImg {

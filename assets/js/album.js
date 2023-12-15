@@ -48,6 +48,7 @@ function showResults(album) {
     p1.className = "mb-0";
     p2.className = "mb-0 fs-8";
     const td3 = document.createElement("td");
+    td3.className = "tabTitle";
     const p = document.createElement("p");
     p.className = "mb-0";
     const views = Math.round(Math.random() * 700000) + 3000000;
@@ -60,7 +61,7 @@ function showResults(album) {
     if (albumId !== "liked") {
       // se non siamo nella playlist brani che ti piacciono, creo td4 col cuore bianco e faccio tutte le funzioni
       td4.innerHTML = '<i class="bi bi-heart d-none"></i>';
-      // al caricamento della pagina controlla se una o più canzoni dell'album sono incluse in localstorage. In caso, mette cuore pieno
+      // al caricamento della pagina controlla se una o piÃ¹ canzoni dell'album sono incluse in localstorage. In caso, mette cuore pieno
       likedSongs.forEach((track) => {
         if (track.id == song.id) {
           td4.innerHTML = '<i class="bi bi-heart-fill d-none"></i>';
@@ -129,11 +130,19 @@ function showResults(album) {
       });
     }
     const td5 = document.createElement("td");
+    td5.className = "tabTitle";
     const duration = document.createElement("p");
     duration.className = "mb-0 ms-auto";
     const resto = song.duration % 60 < 10 ? "0" + (song.duration % 60) : song.duration % 60;
     duration.innerHTML = `${parseInt(song.duration / 60)}:${resto}`;
     td5.appendChild(duration);
+
+    const td5a = document.createElement("td");
+    td5a.className = "tabTitleMob";
+    const dot = document.createElement("i");
+    dot.innerHTML = `<i class="bi bi-three-dots-vertical"></i>`;
+
+    td5a.appendChild(dot);
 
     const td6 = document.createElement("td");
     td6.style = "width: 60px";
@@ -144,6 +153,7 @@ function showResults(album) {
     tr.appendChild(td3);
     tr.appendChild(td4);
     tr.appendChild(td5);
+    tr.appendChild(td5a);
     tr.appendChild(td6);
 
     songDiv.appendChild(tr);
@@ -203,6 +213,8 @@ function showCover(album) {
 
     const divAlbum = document.getElementById("coverBackAlbum");
     divAlbum.style = `background-color: rgba(117,96,234,254)`;
+    const divSongs = document.getElementById("playAlbum");
+    divSongs.style = `background: linear-gradient(rgba(117,96,234,0.8) 0%, rgba(29,29,29,255) 40%)`;
   } else {
     img.src = album.cover_medium;
     title.innerHTML = album.title;
@@ -233,13 +245,13 @@ function showColor(albumCover) {
     color = colorThief.getColor(image);
     divAlbum = document.getElementById("coverBackAlbum");
     divAlbum.style = `background-color: rgba(${color.join(",")})`;
-    playAlbum.style = `background: linear-gradient(rgba(${color.join(",")},0.8) 0%, rgba(29,29,29,255) 40%)`;
+    divSongs.style = `background: linear-gradient(rgba(${color.join(",")},0.8) 0%, rgba(29,29,29,255) 40%)`;
   } else {
     image.addEventListener("load", function () {
       color = colorThief.getColor(image);
       divAlbum = document.getElementById("coverBackAlbum");
       divAlbum.style = `background-color: rgba(${color.join(",")})`;
-      playAlbum.style = `background: linear-gradient(rgba(${color.join(",")}, 0.8) 0%, rgba(29,29,29,255) 40%)`;
+      divSongs.style = `background: linear-gradient(rgba(${color.join(",")}, 0.8) 0%, rgba(29,29,29,255) 40%)`;
     });
   }
 }

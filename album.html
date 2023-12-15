@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="./assets/dist/css/style.min.css" />
     <link rel="stylesheet" href="./assets/css/circular-font.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
-    <link rel="shortcut icon" href="./assets/imgs/logo.svg" type="image/ico" />
-    <title>Spotify - Album</title>
+    <title>Album</title>
   </head>
   <body>
     <div class="container-fluid p-0">
@@ -88,7 +87,7 @@
           </div>
         </div>
         <!--Main-->
-        <main class="flex-grow-1 spotify-bg text-white overflow-y-scroll overflow-x-hidden">
+        <main class="flex-grow-1 spotify-bg text-white overflow-x-hidden">
           <div id="coverBackAlbum" class="px-4 py-2">
             <div id="btn_acc" class="d-flex justify-content-between mt-3 mb-3">
               <div id="btns" class="d-flex">
@@ -127,9 +126,9 @@
             <button id="showBtn" class="btn btn-black rounded-end-0 position-fixed custom-fixed d-none">
               <i class="bi bi-chevron-compact-left text-white-50"></i>
             </button>
-            <div id="currentAlbum" class="p-3 d-flex align-items-end rounded-1 mb-3">
+            <div id="currentAlbum" class="p-3 d-flex flex-column rounded-1 mb-3">
               <div style="width: 200px" class="me-3 flex-shrink-0">
-                <img id="coverAlbum" src="" class="shadow w-100" />
+                <img src="" class="shadow w-100" />
               </div>
               <!------>
               <div id="albumInfo" class="flex-grow-1">
@@ -139,7 +138,7 @@
                 <div id="info">
                   <h1 class="display-2 fw-bold line-height-1"></h1>
                   <div id="photoArt" class="d-flex mt-3 align-content-center">
-                    <div style="width: 20px" class="d-flex">
+                    <div style="width: 20px" class="d-flex" id="roundedImg">
                       <img src="./assets/imgs/main/image-16.jpg" alt="artisticon" class="w-100 rounded-circle" />
                     </div>
                     <p class="mx-1 fs-8 mb-0"></p>
@@ -166,9 +165,9 @@
                   <tr class="">
                     <th>#</th>
                     <th>Titolo</th>
-                    <th>Riproduzioni</th>
+                    <th class="tabTitle">Riproduzioni</th>
                     <th></th>
-                    <th><i class="bi bi-clock"></i></th>
+                    <th class="tabTitle"><i class="bi bi-clock"></i></th>
                     <th></th>
                   </tr>
                 </thead>
@@ -229,8 +228,8 @@
         </aside>
       </div>
       <!--Footer-->
-      <footer class="container-fluid spotify-bg text-white px-3 mb-0 sticky-bottom">
-        <div class="row row-cols-3">
+      <footer class="container-fluid spotify-bg text-white mb-0 sticky-bottom">
+        <div class="row row-cols-3 px-3">
           <div id="footer1" class="col d-flex align-items-center">
             <div id="footerImg" class="p-2 me-3" style="width: 80px">
               <img src="./assets/imgs/main/image-14.jpg" alt="img14" class="w-100" />
